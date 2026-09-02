@@ -39,6 +39,7 @@ struct CaptureSheet: View {
                             .autocorrectionDisabled()
                             .keyboardType(.URL)
                             .accessibilityLabel("URL")
+                            .accessibilityIdentifier("capture-url")
                     case .image:
                         PhotosPicker(selection: $photoItem, matching: .images) {
                             Label(hasImage ? "Choose another image" : "Choose from Photos", systemImage: "photo.on.rectangle")
