@@ -1,0 +1,664 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		29C1726913A3FA2F8B3FA425 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978DBFF3E6130A2A07FB26C0 /* Models.swift */; };
+		2A40DDE56252E4E698271B27 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6D127320F7C2E50063D332 /* ShareViewController.swift */; };
+		3722695E753B2ACA0473631C /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978DBFF3E6130A2A07FB26C0 /* Models.swift */; };
+		45B5090CFA549709246B2853 /* CapturePersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBE4B6CCDF23A37CE13AC17 /* CapturePersistence.swift */; };
+		4A6047720A73736DA18B5DC1 /* CaptureShareExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = C7F4382219B84F2E40BBABA2 /* CaptureShareExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A7A8E342159E531AF3FF6622 /* CaptureApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3703E2A74F8D0CD3B88EC8 /* CaptureApp.swift */; };
+		A9C94904C203884061029AE9 /* CapturePersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBE4B6CCDF23A37CE13AC17 /* CapturePersistence.swift */; };
+		AE1234E4A013D6A9B19D6D1E /* PersistenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FF02C08C8ABF6C05A60B19 /* PersistenceTests.swift */; };
+		DB84DA3B38EC148B5DEBE4E9 /* CaptureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F4F98D9C8D14B85F5E7CC7 /* CaptureUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5D6837D82CD0A0A63C8F2053 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F37CB672B064795DABF49648 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B16652413D28E550B82BAB3;
+			remoteInfo = Capture;
+		};
+		C640D6F59679E1C2439B3F91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F37CB672B064795DABF49648 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE7C7194FA9BB6013488BCEE;
+			remoteInfo = CaptureShareExtension;
+		};
+		D23867BA09635D7BCE25A480 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F37CB672B064795DABF49648 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B16652413D28E550B82BAB3;
+			remoteInfo = Capture;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		66BDE22BCACC6ED52F354FA6 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4A6047720A73736DA18B5DC1 /* CaptureShareExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		5E3703E2A74F8D0CD3B88EC8 /* CaptureApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureApp.swift; sourceTree = "<group>"; };
+		63A96826DC259172B6EEC04E /* CaptureUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = CaptureUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B1A52911861CECACB7257DD /* CaptureTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = CaptureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CE460EEF5B3B5B302790AB8 /* CaptureShareExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CaptureShareExtension.entitlements; sourceTree = "<group>"; };
+		87747926BD259319B628DB73 /* Capture.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Capture.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C2DF0F21FC6C365DE2926FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		978DBFF3E6130A2A07FB26C0 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		9FBD91973289499929F6E744 /* Capture.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Capture.entitlements; sourceTree = "<group>"; };
+		B1FF02C08C8ABF6C05A60B19 /* PersistenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceTests.swift; sourceTree = "<group>"; };
+		B3F4F98D9C8D14B85F5E7CC7 /* CaptureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureUITests.swift; sourceTree = "<group>"; };
+		C7F4382219B84F2E40BBABA2 /* CaptureShareExtension.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = CaptureShareExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFBE4B6CCDF23A37CE13AC17 /* CapturePersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapturePersistence.swift; sourceTree = "<group>"; };
+		FF6D127320F7C2E50063D332 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		3B6865D6C93B01DFFBB9A89C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				9FBD91973289499929F6E744 /* Capture.entitlements */,
+				5E3703E2A74F8D0CD3B88EC8 /* CaptureApp.swift */,
+			);
+			name = App;
+			path = Capture/App;
+			sourceTree = "<group>";
+		};
+		75B5C14D45F95F75923F9370 /* CaptureUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B3F4F98D9C8D14B85F5E7CC7 /* CaptureUITests.swift */,
+			);
+			path = CaptureUITests;
+			sourceTree = "<group>";
+		};
+		787BB842C36832263F2155BB /* CaptureShareExtension */ = {
+			isa = PBXGroup;
+			children = (
+				7CE460EEF5B3B5B302790AB8 /* CaptureShareExtension.entitlements */,
+				8C2DF0F21FC6C365DE2926FB /* Info.plist */,
+				FF6D127320F7C2E50063D332 /* ShareViewController.swift */,
+			);
+			path = CaptureShareExtension;
+			sourceTree = "<group>";
+		};
+		7DC9DCD1962B144C2483E0A1 /* CaptureTests */ = {
+			isa = PBXGroup;
+			children = (
+				B1FF02C08C8ABF6C05A60B19 /* PersistenceTests.swift */,
+			);
+			path = CaptureTests;
+			sourceTree = "<group>";
+		};
+		996D730C62AE43D58B094870 = {
+			isa = PBXGroup;
+			children = (
+				3B6865D6C93B01DFFBB9A89C /* App */,
+				787BB842C36832263F2155BB /* CaptureShareExtension */,
+				7DC9DCD1962B144C2483E0A1 /* CaptureTests */,
+				75B5C14D45F95F75923F9370 /* CaptureUITests */,
+				B2A3B27B74A8CD88F600B218 /* Shared */,
+				EC5F676C046689FB3E6D14C3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B2A3B27B74A8CD88F600B218 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				DFBE4B6CCDF23A37CE13AC17 /* CapturePersistence.swift */,
+				978DBFF3E6130A2A07FB26C0 /* Models.swift */,
+			);
+			name = Shared;
+			path = Capture/Shared;
+			sourceTree = "<group>";
+		};
+		EC5F676C046689FB3E6D14C3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				87747926BD259319B628DB73 /* Capture.app */,
+				C7F4382219B84F2E40BBABA2 /* CaptureShareExtension.appex */,
+				7B1A52911861CECACB7257DD /* CaptureTests.xctest */,
+				63A96826DC259172B6EEC04E /* CaptureUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		303F785E972F8A1BAC51A35E /* CaptureUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F48D24D213C25778E26D0E76 /* Build configuration list for PBXNativeTarget "CaptureUITests" */;
+			buildPhases = (
+				64A2D41E71C379418FA0D931 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F1FFCCD06C8A64099D88BFF4 /* PBXTargetDependency */,
+			);
+			name = CaptureUITests;
+			packageProductDependencies = (
+			);
+			productName = CaptureUITests;
+			productReference = 63A96826DC259172B6EEC04E /* CaptureUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		4478FBF47396ED2BF6743E13 /* CaptureTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 73955206882DD597334A8BAF /* Build configuration list for PBXNativeTarget "CaptureTests" */;
+			buildPhases = (
+				7B2A3E6C9E70C5CBA38B2CCB /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				10709A0DE931CFA01505CCB3 /* PBXTargetDependency */,
+			);
+			name = CaptureTests;
+			packageProductDependencies = (
+			);
+			productName = CaptureTests;
+			productReference = 7B1A52911861CECACB7257DD /* CaptureTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7B16652413D28E550B82BAB3 /* Capture */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D33B3E2A4BB27F4841886EBA /* Build configuration list for PBXNativeTarget "Capture" */;
+			buildPhases = (
+				D8101C438C655EBE9662FB1F /* Sources */,
+				66BDE22BCACC6ED52F354FA6 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				029237E5CC80F58B348AF2DF /* PBXTargetDependency */,
+			);
+			name = Capture;
+			packageProductDependencies = (
+			);
+			productName = Capture;
+			productReference = 87747926BD259319B628DB73 /* Capture.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CE7C7194FA9BB6013488BCEE /* CaptureShareExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6E89BB3D30FB8BE90CD27C8 /* Build configuration list for PBXNativeTarget "CaptureShareExtension" */;
+			buildPhases = (
+				8663848AE0891D85E467800F /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CaptureShareExtension;
+			packageProductDependencies = (
+			);
+			productName = CaptureShareExtension;
+			productReference = C7F4382219B84F2E40BBABA2 /* CaptureShareExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F37CB672B064795DABF49648 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 2600;
+				TargetAttributes = {
+					303F785E972F8A1BAC51A35E = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+						TestTargetID = 7B16652413D28E550B82BAB3;
+					};
+					4478FBF47396ED2BF6743E13 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+					7B16652413D28E550B82BAB3 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+					CE7C7194FA9BB6013488BCEE = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = E199085336C88D40A03F6467 /* Build configuration list for PBXProject "Capture" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 996D730C62AE43D58B094870;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = EC5F676C046689FB3E6D14C3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7B16652413D28E550B82BAB3 /* Capture */,
+				CE7C7194FA9BB6013488BCEE /* CaptureShareExtension */,
+				4478FBF47396ED2BF6743E13 /* CaptureTests */,
+				303F785E972F8A1BAC51A35E /* CaptureUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		64A2D41E71C379418FA0D931 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB84DA3B38EC148B5DEBE4E9 /* CaptureUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B2A3E6C9E70C5CBA38B2CCB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE1234E4A013D6A9B19D6D1E /* PersistenceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8663848AE0891D85E467800F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45B5090CFA549709246B2853 /* CapturePersistence.swift in Sources */,
+				3722695E753B2ACA0473631C /* Models.swift in Sources */,
+				2A40DDE56252E4E698271B27 /* ShareViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8101C438C655EBE9662FB1F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7A8E342159E531AF3FF6622 /* CaptureApp.swift in Sources */,
+				A9C94904C203884061029AE9 /* CapturePersistence.swift in Sources */,
+				29C1726913A3FA2F8B3FA425 /* Models.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		029237E5CC80F58B348AF2DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE7C7194FA9BB6013488BCEE /* CaptureShareExtension */;
+			targetProxy = C640D6F59679E1C2439B3F91 /* PBXContainerItemProxy */;
+		};
+		10709A0DE931CFA01505CCB3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B16652413D28E550B82BAB3 /* Capture */;
+			targetProxy = D23867BA09635D7BCE25A480 /* PBXContainerItemProxy */;
+		};
+		F1FFCCD06C8A64099D88BFF4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B16652413D28E550B82BAB3 /* Capture */;
+			targetProxy = 5D6837D82CD0A0A63C8F2053 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2D292EF7011B4DE777A94C5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Capture/App/Capture.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Capture;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rudy.capture;
+				PRODUCT_NAME = Capture;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		33AA3320D107D48CA2EE88D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rudy.capture.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Capture.app/Capture";
+			};
+			name = Release;
+		};
+		4B03FED9A17340F197563370 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 0.1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = targeted;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		56D073728C880A021ADE96A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rudy.capture.uitests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Capture;
+			};
+			name = Debug;
+		};
+		7117ECB6A258320A07518679 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = CaptureShareExtension/CaptureShareExtension.entitlements;
+				INFOPLIST_FILE = CaptureShareExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rudy.capture.share;
+				PRODUCT_NAME = CaptureShareExtension;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		812A4C5E2F064C769C95694E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Capture/App/Capture.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Capture;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rudy.capture;
+				PRODUCT_NAME = Capture;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ABB8D5020B5A509B170C1C3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rudy.capture.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Capture.app/Capture";
+			};
+			name = Debug;
+		};
+		D39F5F8D77D168942A991695 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 0.1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = targeted;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		D4867434A788F35B728EE2EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rudy.capture.uitests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Capture;
+			};
+			name = Release;
+		};
+		D4E3C0139AAF63A0C0B2A522 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = CaptureShareExtension/CaptureShareExtension.entitlements;
+				INFOPLIST_FILE = CaptureShareExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rudy.capture.share;
+				PRODUCT_NAME = CaptureShareExtension;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		73955206882DD597334A8BAF /* Build configuration list for PBXNativeTarget "CaptureTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABB8D5020B5A509B170C1C3B /* Debug */,
+				33AA3320D107D48CA2EE88D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		D33B3E2A4BB27F4841886EBA /* Build configuration list for PBXNativeTarget "Capture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				812A4C5E2F064C769C95694E /* Debug */,
+				2D292EF7011B4DE777A94C5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E199085336C88D40A03F6467 /* Build configuration list for PBXProject "Capture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D39F5F8D77D168942A991695 /* Debug */,
+				4B03FED9A17340F197563370 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E6E89BB3D30FB8BE90CD27C8 /* Build configuration list for PBXNativeTarget "CaptureShareExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7117ECB6A258320A07518679 /* Debug */,
+				D4E3C0139AAF63A0C0B2A522 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F48D24D213C25778E26D0E76 /* Build configuration list for PBXNativeTarget "CaptureUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56D073728C880A021ADE96A8 /* Debug */,
+				D4867434A788F35B728EE2EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F37CB672B064795DABF49648 /* Project object */;
+}

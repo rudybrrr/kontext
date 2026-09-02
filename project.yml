@@ -1,0 +1,100 @@
+name: Capture
+options:
+  bundleIdPrefix: com.rudy
+  deploymentTarget:
+    iOS: "26.0"
+  xcodeVersion: "26.0"
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    CURRENT_PROJECT_VERSION: 1
+    MARKETING_VERSION: 0.1.0
+    DEVELOPMENT_TEAM: ""
+    CODE_SIGN_STYLE: Automatic
+    ENABLE_USER_SCRIPT_SANDBOXING: YES
+    SWIFT_STRICT_CONCURRENCY: targeted
+    TARGETED_DEVICE_FAMILY: "1"
+targets:
+  Capture:
+    type: application
+    platform: iOS
+    sources:
+      - Capture/Shared
+      - Capture/App
+    entitlements:
+      path: Capture/App/Capture.entitlements
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.rudy.capture
+        PRODUCT_NAME: Capture
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: Capture
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
+        INFOPLIST_KEY_UISupportedInterfaceOrientations: UIInterfaceOrientationPortrait
+        INFOPLIST_KEY_NSHumanReadableCopyright: ""
+    dependencies:
+      - target: CaptureShareExtension
+        embed: true
+  CaptureShareExtension:
+    type: app-extension
+    platform: iOS
+    sources:
+      - Capture/Shared
+      - CaptureShareExtension
+    info:
+      path: CaptureShareExtension/Info.plist
+      properties:
+        CFBundleDisplayName: Capture
+        CFBundleShortVersionString: "$(MARKETING_VERSION)"
+        CFBundleVersion: "$(CURRENT_PROJECT_VERSION)"
+        NSExtension:
+          NSExtensionAttributes:
+            NSExtensionActivationRule:
+              NSExtensionActivationSupportsImageWithMaxCount: 1
+              NSExtensionActivationSupportsText: true
+              NSExtensionActivationSupportsWebURLWithMaxCount: 1
+          NSExtensionPointIdentifier: com.apple.share-services
+          NSExtensionPrincipalClass: "$(PRODUCT_MODULE_NAME).ShareViewController"
+    entitlements:
+      path: CaptureShareExtension/CaptureShareExtension.entitlements
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.rudy.capture.share
+        PRODUCT_NAME: CaptureShareExtension
+        SKIP_INSTALL: YES
+        APPLICATION_EXTENSION_API_ONLY: YES
+  CaptureTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources: CaptureTests
+    dependencies:
+      - target: Capture
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.rudy.capture.tests
+        GENERATE_INFOPLIST_FILE: YES
+  CaptureUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources: CaptureUITests
+    dependencies:
+      - target: Capture
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.rudy.capture.uitests
+        GENERATE_INFOPLIST_FILE: YES
+        TEST_TARGET_NAME: Capture
+schemes:
+  Capture:
+    build:
+      targets:
+        Capture: all
+        CaptureShareExtension: all
+        CaptureTests: [test]
+        CaptureUITests: [test]
+    test:
+      gatherCoverageData: true
+      targets:
+        - CaptureTests
+        - CaptureUITests
