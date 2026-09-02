@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-02T09:57:21Z",
+  "title": "Design System: Capture",
+  "extensions": {
+    "colorMeta": {
+      "system-tint": {
+        "role": "primary",
+        "displayName": "System Tint",
+        "canonical": "light-dark(#007aff, #0a84ff)",
+        "tonalRamp": ["#001a33", "#003a66", "#005a99", "#007aff", "#409cff", "#80bdff", "#bfdfff", "#eaf5ff"]
+      },
+      "canvas": {
+        "role": "neutral",
+        "displayName": "Canvas",
+        "canonical": "light-dark(#ffffff, #000000)",
+        "tonalRamp": ["#000000", "#1c1c1e", "#3a3a3c", "#636366", "#8e8e93", "#aeaeb2", "#d1d1d6", "#ffffff"]
+      },
+      "grouped-ground": {
+        "role": "neutral",
+        "displayName": "Grouped Ground",
+        "canonical": "light-dark(#f2f2f7, #000000)",
+        "tonalRamp": ["#000000", "#1c1c1e", "#3a3a3c", "#636366", "#8e8e93", "#aeaeb2", "#d1d1d6", "#f2f2f7"]
+      },
+      "grouped-surface": {
+        "role": "neutral",
+        "displayName": "Grouped Surface",
+        "canonical": "light-dark(#ffffff, #1c1c1e)",
+        "tonalRamp": ["#1c1c1e", "#2c2c2e", "#48484a", "#636366", "#8e8e93", "#aeaeb2", "#d1d1d6", "#ffffff"]
+      },
+      "label-primary": {
+        "role": "neutral",
+        "displayName": "Primary Label",
+        "canonical": "light-dark(#000000, #ffffff)",
+        "tonalRamp": ["#000000", "#1c1c1e", "#3a3a3c", "#636366", "#8e8e93", "#aeaeb2", "#d1d1d6", "#ffffff"]
+      },
+      "label-secondary": {
+        "role": "neutral",
+        "displayName": "Secondary Label",
+        "canonical": "light-dark(#8e8e93, #98989d)",
+        "tonalRamp": ["#161618", "#303034", "#4b4b50", "#66666c", "#818187", "#9c9ca2", "#c5c5ca", "#eeeeF2"]
+      },
+      "fill-quaternary": {
+        "role": "neutral",
+        "displayName": "Quaternary Fill",
+        "canonical": "light-dark(rgba(116, 116, 128, 0.08), rgba(118, 118, 128, 0.18))",
+        "tonalRamp": ["#1c1c1e", "#343438", "#4c4c52", "#66666e", "#808089", "#9c9ca5", "#c2c2c9", "#eeeef2"]
+      },
+      "on-tint": {
+        "role": "neutral",
+        "displayName": "On Tint",
+        "canonical": "#ffffff",
+        "tonalRamp": ["#1c1c1e", "#3a3a3c", "#636366", "#8e8e93", "#aeaeb2", "#d1d1d6", "#f2f2f7", "#ffffff"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Large Navigation Title", "purpose": "Top-level destination titles; scales with Dynamic Type." },
+      "headline": { "displayName": "Headline", "purpose": "Primary actions, capture titles, and empty-state titles." },
+      "body": { "displayName": "Body", "purpose": "Forms, values, descriptions, and captured content." },
+      "subheadline": { "displayName": "Subheadline", "purpose": "Summaries, descriptions, extracted text, and topic chips." },
+      "caption": { "displayName": "Caption", "purpose": "Context, time, and processing metadata." },
+      "title3": { "displayName": "Title 3", "purpose": "Symbolic content inside capture thumbnails." }
+    }
+  },
+  "components": [
+    {
+      "name": "Quick Capture Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one full-width prominent action at the top of the home surface.",
+      "html": "<button class=\"ds-capture-button\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"10\" fill=\"currentColor\"/><path d=\"M12 7v10M7 12h10\"/></svg><span>Capture something</span></button>",
+      "css": ".ds-capture-button { width: 100%; min-height: 50px; padding: 12px 16px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 0; border-radius: 999px; background: light-dark(#007aff, #0a84ff); color: #fff; font: 600 17px/1.29 -apple-system, BlinkMacSystemFont, sans-serif; cursor: pointer; } .ds-capture-button svg { width: 24px; height: 24px; } .ds-capture-button path { fill: none; stroke: light-dark(#007aff, #0a84ff); stroke-width: 2.2; stroke-linecap: round; } .ds-capture-button:hover { filter: brightness(.96); } .ds-capture-button:focus-visible { outline: 3px solid light-dark(rgba(0,122,255,.3), rgba(10,132,255,.45)); outline-offset: 3px; } .ds-capture-button:active { opacity: .72; }"
+    },
+    {
+      "name": "Toolbar Navigation",
+      "kind": "nav",
+      "description": "Trailing search and settings actions rendered as native symbol controls on system material.",
+      "html": "<nav class=\"ds-toolbar\" aria-label=\"Utilities\"><button aria-label=\"Search\"><svg viewBox=\"0 0 24 24\"><circle cx=\"10.5\" cy=\"10.5\" r=\"6.5\"/><path d=\"m15.5 15.5 5 5\"/></svg></button><button aria-label=\"Settings\"><svg viewBox=\"0 0 24 24\"><circle cx=\"12\" cy=\"12\" r=\"3\"/><path d=\"M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9 7 7M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1\"/></svg></button></nav>",
+      "css": ".ds-toolbar { width: max-content; display: flex; gap: 2px; padding: 3px; border: 1px solid light-dark(rgba(60,60,67,.12), rgba(84,84,88,.5)); border-radius: 999px; background: light-dark(rgba(255,255,255,.78), rgba(28,28,30,.78)); backdrop-filter: blur(18px); } .ds-toolbar button { width: 44px; height: 44px; padding: 10px; border: 0; border-radius: 999px; background: transparent; color: light-dark(#000, #fff); cursor: pointer; } .ds-toolbar svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; } .ds-toolbar button:hover { background: light-dark(rgba(116,116,128,.08), rgba(118,118,128,.18)); } .ds-toolbar button:focus-visible { outline: 3px solid light-dark(rgba(0,122,255,.3), rgba(10,132,255,.45)); } .ds-toolbar button:active { opacity: .55; }"
+    },
+    {
+      "name": "Capture Type Picker",
+      "kind": "input",
+      "description": "A native segmented choice between Text, URL, and Image capture modes.",
+      "html": "<div class=\"ds-segments\" role=\"radiogroup\" aria-label=\"Type\"><label><input type=\"radio\" name=\"type\" checked><span>Text</span></label><label><input type=\"radio\" name=\"type\"><span>URL</span></label><label><input type=\"radio\" name=\"type\"><span>Image</span></label></div>",
+      "css": ".ds-segments { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; padding: 2px; border-radius: 9px; background: light-dark(rgba(116,116,128,.12), rgba(118,118,128,.24)); font: 400 13px/1.3 -apple-system, BlinkMacSystemFont, sans-serif; color: light-dark(#000, #fff); } .ds-segments label { position: relative; text-align: center; cursor: pointer; } .ds-segments input { position: absolute; opacity: 0; } .ds-segments span { display: block; padding: 7px 12px; border-radius: 7px; } .ds-segments input:checked + span { background: light-dark(#fff, #636366); font-weight: 600; } .ds-segments label:hover span { background-color: light-dark(rgba(255,255,255,.6), rgba(99,99,102,.6)); } .ds-segments input:focus-visible + span { outline: 3px solid light-dark(rgba(0,122,255,.3), rgba(10,132,255,.45)); }"
+    },
+    {
+      "name": "Search Field",
+      "kind": "input",
+      "description": "The persistent native search affordance on the dedicated search destination.",
+      "html": "<label class=\"ds-search\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"10.5\" cy=\"10.5\" r=\"6.5\"/><path d=\"m15.5 15.5 5 5\"/></svg><input type=\"search\" placeholder=\"What do you remember?\"></label>",
+      "css": ".ds-search { min-height: 36px; padding: 0 10px; display: flex; align-items: center; gap: 7px; border-radius: 10px; background: light-dark(rgba(116,116,128,.12), rgba(118,118,128,.24)); color: light-dark(#8e8e93, #98989d); } .ds-search svg { width: 18px; height: 18px; flex: none; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; } .ds-search input { width: 100%; border: 0; outline: 0; background: transparent; color: light-dark(#000, #fff); font: 400 17px/1.29 -apple-system, BlinkMacSystemFont, sans-serif; } .ds-search:hover { filter: brightness(.98); } .ds-search:focus-within { outline: 3px solid light-dark(rgba(0,122,255,.3), rgba(10,132,255,.45)); }"
+    },
+    {
+      "name": "Capture Row",
+      "kind": "custom",
+      "description": "The recurring scannable unit for a capture, its summary, context, age, and processing state.",
+      "html": "<article class=\"ds-capture-row\"><div class=\"ds-capture-thumb\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M5 4h14v16H5zM8 8h8M8 12h8M8 16h5\"/></svg></div><div><h3>Captured thought</h3><p>A concise summary of the saved content.</p><small>Inbox · just now</small></div></article>",
+      "css": ".ds-capture-row { display: flex; align-items: flex-start; gap: 12px; padding: 10px 0; color: light-dark(#000, #fff); font-family: -apple-system, BlinkMacSystemFont, sans-serif; } .ds-capture-thumb { width: 44px; height: 44px; flex: none; display: grid; place-items: center; border-radius: 9px; background: light-dark(rgba(116,116,128,.08), rgba(118,118,128,.18)); color: light-dark(#007aff, #0a84ff); } .ds-capture-thumb svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linejoin: round; } .ds-capture-row h3 { margin: 0 0 4px; font-size: 17px; line-height: 1.29; } .ds-capture-row p { margin: 0 0 4px; color: light-dark(#8e8e93, #98989d); font-size: 15px; line-height: 1.33; } .ds-capture-row small { color: light-dark(#8e8e93, #98989d); font-size: 12px; line-height: 1.33; } .ds-capture-row:hover h3 { color: light-dark(#007aff, #0a84ff); } .ds-capture-row:focus-within { outline: 3px solid light-dark(rgba(0,122,255,.3), rgba(10,132,255,.45)); outline-offset: 3px; }"
+    },
+    {
+      "name": "Topic Chip",
+      "kind": "chip",
+      "refersTo": "topic-chip",
+      "description": "A quiet informational topic label inside a horizontally scrolling row.",
+      "html": "<span class=\"ds-topic-chip\">Research</span>",
+      "css": ".ds-topic-chip { display: inline-block; padding: 6px 10px; border-radius: 999px; background: light-dark(rgba(116,116,128,.08), rgba(118,118,128,.18)); color: light-dark(#000, #fff); font: 400 15px/1.33 -apple-system, BlinkMacSystemFont, sans-serif; } .ds-topic-chip:hover { background: light-dark(rgba(116,116,128,.14), rgba(118,118,128,.26)); } .ds-topic-chip:focus-visible { outline: 3px solid light-dark(rgba(0,122,255,.3), rgba(10,132,255,.45)); outline-offset: 2px; }"
+    },
+    {
+      "name": "Inset Group Container",
+      "kind": "card",
+      "description": "The system-grouped surface used for list sections and native unavailable content.",
+      "html": "<section class=\"ds-inset-group\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M4 8h16v11H4zM4 8l3-4h10l3 4M9 13a3 3 0 0 0 6 0\"/></svg><h3>Nothing captured yet</h3><p>Save a thought, link, or screenshot. Capture will organize it after it is safely stored.</p></section>",
+      "css": ".ds-inset-group { padding: 36px 24px; border-radius: 24px; background: light-dark(#fff, #1c1c1e); color: light-dark(#000, #fff); text-align: center; font-family: -apple-system, BlinkMacSystemFont, sans-serif; } .ds-inset-group svg { width: 48px; height: 48px; fill: none; stroke: light-dark(#8e8e93, #98989d); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; } .ds-inset-group h3 { margin: 18px 0 6px; font-size: 17px; line-height: 1.29; } .ds-inset-group p { max-width: 34ch; margin: 0 auto; color: light-dark(#8e8e93, #98989d); font-size: 15px; line-height: 1.33; } .ds-inset-group:hover { background: light-dark(#fff, #1c1c1e); } .ds-inset-group:focus-within { outline: 3px solid light-dark(rgba(0,122,255,.3), rgba(10,132,255,.45)); outline-offset: 3px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Native Intake Utility",
+    "overview": "Capture feels like an Apple utility that was already waiting on the device: immediate, quiet, and legible. Native navigation, controls, semantic colors, SF Symbols, inset lists, forms, and system typography do the visual work; the product does not layer a separate brand costume over them.\n\nThe hierarchy serves one story: save first, then let on-device understanding organize the result. A single full-width tint action leads the home surface, while contexts, captures, metadata, and correction tools settle into familiar system structures. Density stays compact at default sizes and expands naturally under Dynamic Type rather than being held to a fixed composition.",
+    "keyCharacteristics": [
+      "System-native and appearance-adaptive.",
+      "One prominent tint action; supporting actions remain standard navigation or form controls.",
+      "Content-led inset lists and forms rather than dashboard panels.",
+      "SF Symbols and semantic system text styles throughout.",
+      "Dynamic Type, VoiceOver, and native control behavior are part of the visual system."
+    ],
+    "rules": [
+      { "name": "The System Semantics Rule", "body": "Use Apple semantic roles and the platform tint; never freeze a light-mode value across appearances.", "section": "colors" },
+      { "name": "The System Voice Rule", "body": "Use semantic system styles so hierarchy remains native and Dynamic Type remains authoritative.", "section": "typography" },
+      { "name": "The Platform Depth Rule", "body": "Let navigation chrome, sheets, lists, and controls receive depth from system materials; do not add custom shadows.", "section": "elevation" },
+      { "name": "The Content Geometry Rule", "body": "Reserve explicit rounded rectangles for media and thumbnails; let standard controls inherit their native silhouette.", "section": "shapes" }
+    ],
+    "dos": [
+      "Do build new surfaces from native SwiftUI navigation, list, form, control, and feedback patterns.",
+      "Do use semantic colors, SF Symbols, and semantic text styles so light mode, dark mode, and Dynamic Type stay coherent.",
+      "Do keep one clearly dominant capture action and place secondary actions in their expected navigation or form locations.",
+      "Do preserve 44-point minimum targets, useful VoiceOver labels, and content that reflows rather than clips."
+    ],
+    "donts": [
+      "Don't introduce folder-first navigation, dashboard furniture, or a custom productivity-app shell.",
+      "Don't add custom display faces, decorative icon sets, gradients, hard offset shadows, or ornamental labels.",
+      "Don't hard-code light-only colors, fixed text sizes, or fixed-height containers around variable copy.",
+      "Don't replace native control states and materials with lookalike custom components without a demonstrated product need."
+    ]
+  }
+}
