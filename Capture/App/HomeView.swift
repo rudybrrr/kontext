@@ -100,7 +100,7 @@ struct HomeView: View {
                 CaptureSheet(container: container)
             }
             .task(id: pendingIDs) {
-                guard !ProcessInfo.processInfo.arguments.contains("--ui-testing") else { return }
+                guard !ProcessInfo.processInfo.arguments.contains(where: { $0.hasPrefix("--ui-testing") }) else { return }
                 for item in items where item.enrichmentState == .pending {
                     guard !Task.isCancelled else { return }
                     await coordinator.process(item, contexts: contexts, modelContext: modelContext)

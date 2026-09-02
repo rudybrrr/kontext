@@ -23,6 +23,9 @@ targets:
       - Capture/App
     entitlements:
       path: Capture/App/Capture.entitlements
+      properties:
+        com.apple.security.application-groups:
+          - group.com.rudy.capture
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.rudy.capture
@@ -58,6 +61,9 @@ targets:
           NSExtensionPrincipalClass: "$(PRODUCT_MODULE_NAME).ShareViewController"
     entitlements:
       path: CaptureShareExtension/CaptureShareExtension.entitlements
+      properties:
+        com.apple.security.application-groups:
+          - group.com.rudy.capture
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.rudy.capture.share

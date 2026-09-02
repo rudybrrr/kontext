@@ -37,4 +37,21 @@ final class CaptureUITests: XCTestCase {
         app.buttons["Create"].tap()
         XCTAssertTrue(app.staticTexts["Reading"].waitForExistence(timeout: 3))
     }
+
+    func testCaptureSurvivesRelaunchInSharedStore() throws {
+        let app = XCUIApplication()
+        let text = "Relaunch \(UUID().uuidString.prefix(8))"
+        app.launchArguments = ["--ui-testing-persistent"]
+        app.launch()
+
+        app.buttons["quick-capture"].tap()
+        app.textViews["capture-text"].tap()
+        app.textViews["capture-text"].typeText(text)
+        app.buttons["save-capture"].tap()
+        XCTAssertTrue(app.staticTexts[text].waitForExistence(timeout: 3))
+
+        app.terminate()
+        app.launch()
+        XCTAssertTrue(app.staticTexts[text].waitForExistence(timeout: 3))
+    }
 }
