@@ -59,6 +59,30 @@ final class EnrichmentTests: XCTestCase {
         XCTAssertEqual(item.context?.id, context.id)
         XCTAssertNotNil(item.embeddingData)
     }
+
+    @MainActor
+    func testCoordinatorReusesPersistedInboxWhenContextSnapshotIsStale() async throws {
+        let container = try CapturePersistence.makeContainer(inMemory: true)
+        let store = CaptureStore(container: container)
+        let first = try store.captureText("First uncertain capture")
+        let second = try store.captureText("Second uncertain capture")
+        let result = EnrichmentResult(
+            title: "Uncertain",
+            summary: "No confident context.",
+            tags: [],
+            suggestedContextName: nil,
+            suggestedContextSummary: nil,
+            contextConfidence: 0
+        )
+        let coordinator = EnrichmentCoordinator(enricher: FixedEnricher(result: result), embedder: NoEmbedding())
+
+        await coordinator.process(first, contexts: [], modelContext: container.mainContext)
+        await coordinator.process(second, contexts: [], modelContext: container.mainContext)
+
+        let inboxCount = try container.mainContext.fetch(FetchDescriptor<CaptureContext>()).filter { $0.name == "Inbox" }.count
+        XCTAssertEqual(inboxCount, 1)
+        XCTAssertEqual(first.context?.id, second.context?.id)
+    }
 }
 
 private enum TestEnrichmentError: Error { case unavailable }

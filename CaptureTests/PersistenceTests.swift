@@ -1,4 +1,5 @@
 import SwiftData
+import UIKit
 import XCTest
 @testable import Capture
 
@@ -40,5 +41,20 @@ final class PersistenceTests: XCTestCase {
         XCTAssertEqual(item.context?.name, "DSAA")
         XCTAssertEqual(context.items.map(\.id), [item.id])
         XCTAssertEqual(item.contextConfidence, 1)
+    }
+
+    func testStoresImageAndThumbnailAsFiles() async throws {
+        let root = FileManager.default.temporaryDirectory.appending(path: UUID().uuidString, directoryHint: .isDirectory)
+        defer { try? FileManager.default.removeItem(at: root) }
+        let data = UIGraphicsImageRenderer(size: CGSize(width: 32, height: 32)).pngData { context in
+            UIColor.systemBlue.setFill()
+            context.fill(CGRect(x: 0, y: 0, width: 32, height: 32))
+        }
+
+        let media = try await MediaStore(rootURL: root).saveImageData(data)
+
+        XCTAssertTrue(FileManager.default.fileExists(atPath: root.appending(path: media.assetPath).path()))
+        XCTAssertNotNil(media.thumbnailPath)
+        XCTAssertTrue(FileManager.default.fileExists(atPath: root.appending(path: media.thumbnailPath!).path()))
     }
 }

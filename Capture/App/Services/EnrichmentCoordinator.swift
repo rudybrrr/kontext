@@ -24,7 +24,7 @@ final class EnrichmentCoordinator {
         self.linkMetadata = linkMetadata
     }
 
-    func process(_ item: CaptureItem, contexts: [CaptureContext], modelContext: ModelContext) async {
+    func process(_ item: CaptureItem, contexts _: [CaptureContext], modelContext: ModelContext) async {
         guard item.enrichmentState == .pending || item.enrichmentState == .failed else { return }
         item.enrichmentState = .processing
         try? modelContext.save()
@@ -59,6 +59,7 @@ final class EnrichmentCoordinator {
                 }
             }
 
+            let contexts = try modelContext.fetch(FetchDescriptor<CaptureContext>())
             let contextValues = contexts.map { EnrichmentContext(id: $0.id, name: $0.name, summary: $0.contextDescription) }
             let result = try await enricher.enrich(text: text, contexts: contextValues)
             item.title = result.title
