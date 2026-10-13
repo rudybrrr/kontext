@@ -108,6 +108,8 @@ struct ItemDetailView: View {
                 }
             }
 
+            SuggestedActionsSection(item: item)
+
             if !item.tags.isEmpty {
                 Section("Topics") {
                     ScrollView(.horizontal) {

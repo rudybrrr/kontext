@@ -30,7 +30,7 @@ Users capture inside the app or from the iOS share sheet, often while browsing S
 
 ## Capabilities and Constraints
 
-The MVP supports text, URL, and image capture; App Group-backed local persistence; OCR and lightweight link metadata; structured Foundation Models enrichment with deterministic fallback; conservative context reuse or Inbox fallback; semantic plus lexical search; context rename/reassignment/creation; retryable enrichment; and on-device proposed events, reminders, and follow-ups that the user must approve before anything is written to Apple Calendar or Reminders. Capture proposes actions only and is not a task manager. It has no accounts, backend, sync, external AI, agents, collaboration, subscriptions, analytics, or custom hierarchy.
+The MVP supports text, URL, and image capture; App Group-backed local persistence; OCR and lightweight link metadata; structured Foundation Models enrichment with deterministic fallback; conservative context reuse or Inbox fallback; semantic plus lexical search; context rename/reassignment/creation; retryable enrichment; on-device proposed events, reminders, and follow-ups; and user-driven approval flows that write to Calendar or Reminders only after an explicit tap (with permission prompts on first approval). Capture proposes actions only and is not a task manager. It has no accounts, backend, sync, external AI, agents, collaboration, subscriptions, analytics, or custom hierarchy.
 
 ## Brand Commitments
 
