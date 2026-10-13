@@ -49,6 +49,13 @@
 		2B3C4D5E6F708192A3B4C5D3 /* ProposedActionApprovalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3C4D5E6F708192A3B4C5D2 /* ProposedActionApprovalService.swift */; };
 		2B3C4D5E6F708192A3B4C5D5 /* ProposedActionViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3C4D5E6F708192A3B4C5D4 /* ProposedActionViews.swift */; };
 		2B3C4D5E6F708192A3B4C5D7 /* ProposedActionApprovalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3C4D5E6F708192A3B4C5D6 /* ProposedActionApprovalTests.swift */; };
+		3C4D5E6F708192A3B4C5D6E1 /* URLFollowUpProposalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4D5E6F708192A3B4C5D6E0 /* URLFollowUpProposalService.swift */; };
+		3C4D5E6F708192A3B4C5D6E3 /* RemindMeIntentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4D5E6F708192A3B4C5D6E2 /* RemindMeIntentService.swift */; };
+		3C4D5E6F708192A3B4C5D6E5 /* HTMLTextExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4D5E6F708192A3B4C5D6E4 /* HTMLTextExtractor.swift */; };
+		3C4D5E6F708192A3B4C5D6E7 /* WebpageTextFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4D5E6F708192A3B4C5D6E6 /* WebpageTextFetcher.swift */; };
+		3C4D5E6F708192A3B4C5D6E9 /* CaptureBackgroundProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4D5E6F708192A3B4C5D6E8 /* CaptureBackgroundProcessing.swift */; };
+		3C4D5E6F708192A3B4C5D6EB /* CaptureAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4D5E6F708192A3B4C5D6EA /* CaptureAppDelegate.swift */; };
+		3C4D5E6F708192A3B4C5D6ED /* CaptureWeek3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4D5E6F708192A3B4C5D6EC /* CaptureWeek3Tests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +140,14 @@
 		2B3C4D5E6F708192A3B4C5D2 /* ProposedActionApprovalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProposedActionApprovalService.swift; sourceTree = "<group>"; };
 		2B3C4D5E6F708192A3B4C5D4 /* ProposedActionViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProposedActionViews.swift; sourceTree = "<group>"; };
 		2B3C4D5E6F708192A3B4C5D6 /* ProposedActionApprovalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProposedActionApprovalTests.swift; sourceTree = "<group>"; };
+		3C4D5E6F708192A3B4C5D6E0 /* URLFollowUpProposalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLFollowUpProposalService.swift; sourceTree = "<group>"; };
+		3C4D5E6F708192A3B4C5D6E2 /* RemindMeIntentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindMeIntentService.swift; sourceTree = "<group>"; };
+		3C4D5E6F708192A3B4C5D6E4 /* HTMLTextExtractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLTextExtractor.swift; sourceTree = "<group>"; };
+		3C4D5E6F708192A3B4C5D6E6 /* WebpageTextFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebpageTextFetcher.swift; sourceTree = "<group>"; };
+		3C4D5E6F708192A3B4C5D6E8 /* CaptureBackgroundProcessing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureBackgroundProcessing.swift; sourceTree = "<group>"; };
+		3C4D5E6F708192A3B4C5D6EA /* CaptureAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureAppDelegate.swift; sourceTree = "<group>"; };
+		3C4D5E6F708192A3B4C5D6EC /* CaptureWeek3Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureWeek3Tests.swift; sourceTree = "<group>"; };
+		3C4D5E6F708192A3B4C5D6EE /* Supplemental-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Supplemental-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -146,6 +161,11 @@
 				1A2B3C4D5E6F708192A3B4C6 /* FoundationModelActionExtractor.swift */,
 				2B3C4D5E6F708192A3B4C5D0 /* ActionCommitting.swift */,
 				2B3C4D5E6F708192A3B4C5D2 /* ProposedActionApprovalService.swift */,
+				3C4D5E6F708192A3B4C5D6E8 /* CaptureBackgroundProcessing.swift */,
+				3C4D5E6F708192A3B4C5D6E4 /* HTMLTextExtractor.swift */,
+				3C4D5E6F708192A3B4C5D6E2 /* RemindMeIntentService.swift */,
+				3C4D5E6F708192A3B4C5D6E0 /* URLFollowUpProposalService.swift */,
+				3C4D5E6F708192A3B4C5D6E6 /* WebpageTextFetcher.swift */,
 				CCAF8AA9E277F2E991824332 /* ContextAssignmentService.swift */,
 				B7B811D1A83059D205691F31 /* EmbeddingService.swift */,
 				2060D765067731E0B4447765 /* EnrichmentCoordinator.swift */,
@@ -162,7 +182,9 @@
 			isa = PBXGroup;
 			children = (
 				9FBD91973289499929F6E744 /* Capture.entitlements */,
+				3C4D5E6F708192A3B4C5D6EA /* CaptureAppDelegate.swift */,
 				5E3703E2A74F8D0CD3B88EC8 /* CaptureApp.swift */,
+				3C4D5E6F708192A3B4C5D6EE /* Supplemental-Info.plist */,
 				F49CF795627C83768CD5D4B3 /* CaptureSheet.swift */,
 				CD7DAB7A6FA0986C6B7A0882 /* DetailViews.swift */,
 				5C3BA091ED8328F5F8A92A06 /* HomeView.swift */,
@@ -206,6 +228,7 @@
 			children = (
 				1A2B3C4D5E6F708192A3B4CA /* ActionExtractionTests.swift */,
 				2B3C4D5E6F708192A3B4C5D6 /* ProposedActionApprovalTests.swift */,
+				3C4D5E6F708192A3B4C5D6EC /* CaptureWeek3Tests.swift */,
 				811D68B9374631D002D64C9F /* ContextAssignmentTests.swift */,
 				12EBC251902488B024D5DAF1 /* EnrichmentTests.swift */,
 				B1FF02C08C8ABF6C05A60B19 /* PersistenceTests.swift */,
@@ -391,6 +414,7 @@
 			files = (
 				1A2B3C4D5E6F708192A3B4CB /* ActionExtractionTests.swift in Sources */,
 				2B3C4D5E6F708192A3B4C5D7 /* ProposedActionApprovalTests.swift in Sources */,
+				3C4D5E6F708192A3B4C5D6ED /* CaptureWeek3Tests.swift in Sources */,
 				95F19C18B885078825BD36F0 /* ContextAssignmentTests.swift in Sources */,
 				7081114CEC7F1089120EF952 /* EnrichmentTests.swift in Sources */,
 				AE1234E4A013D6A9B19D6D1E /* PersistenceTests.swift in Sources */,
@@ -424,6 +448,12 @@
 				2B3C4D5E6F708192A3B4C5D1 /* ActionCommitting.swift in Sources */,
 				2B3C4D5E6F708192A3B4C5D3 /* ProposedActionApprovalService.swift in Sources */,
 				2B3C4D5E6F708192A3B4C5D5 /* ProposedActionViews.swift in Sources */,
+				3C4D5E6F708192A3B4C5D6E9 /* CaptureBackgroundProcessing.swift in Sources */,
+				3C4D5E6F708192A3B4C5D6EB /* CaptureAppDelegate.swift in Sources */,
+				3C4D5E6F708192A3B4C5D6E1 /* URLFollowUpProposalService.swift in Sources */,
+				3C4D5E6F708192A3B4C5D6E3 /* RemindMeIntentService.swift in Sources */,
+				3C4D5E6F708192A3B4C5D6E5 /* HTMLTextExtractor.swift in Sources */,
+				3C4D5E6F708192A3B4C5D6E7 /* WebpageTextFetcher.swift in Sources */,
 				A7A8E342159E531AF3FF6622 /* CaptureApp.swift in Sources */,
 				A9C94904C203884061029AE9 /* CapturePersistence.swift in Sources */,
 				35977FFE24872A558694BFE7 /* CaptureSheet.swift in Sources */,
@@ -474,6 +504,7 @@
 				CODE_SIGN_ENTITLEMENTS = Capture/App/Capture.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Capture/App/Supplemental-Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Capture;
 				INFOPLIST_KEY_NSCalendarsWriteOnlyAccessUsageDescription = "Capture adds calendar events only when you approve a suggested action.";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -615,6 +646,7 @@
 				CODE_SIGN_ENTITLEMENTS = Capture/App/Capture.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Capture/App/Supplemental-Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Capture;
 				INFOPLIST_KEY_NSCalendarsWriteOnlyAccessUsageDescription = "Capture adds calendar events only when you approve a suggested action.";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";

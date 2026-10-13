@@ -34,9 +34,26 @@ private struct ActionCandidates {
 
 struct FoundationModelActionExtractor: ActionExtracting {
     static var isAvailable: Bool {
+        switch status {
+        case .available: true
+        case .unavailable: false
+        }
+    }
+
+    static var status: OnDeviceModelStatus {
         let model = SystemLanguageModel.default
-        guard model.availability == .available, model.supportsLocale() else { return false }
-        return true
+        switch model.availability {
+        case .available:
+            return model.supportsLocale() ? .available : .unavailable("Current language is not supported")
+        case .unavailable(.deviceNotEligible):
+            return .unavailable("This device is not eligible")
+        case .unavailable(.appleIntelligenceNotEnabled):
+            return .unavailable("Apple Intelligence is disabled")
+        case .unavailable(.modelNotReady):
+            return .unavailable("The on-device model is not ready")
+        @unknown default:
+            return .unavailable("The on-device model is unavailable")
+        }
     }
 
     func extractActions(from text: String, referenceDate: Date) async throws -> [ActionCandidate] {

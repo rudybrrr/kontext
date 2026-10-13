@@ -4,8 +4,10 @@ import UIKit
 
 struct HomeView: View {
     let container: ModelContainer
+    var backgroundScheduler: CaptureBackgroundScheduling = CaptureBackgroundTaskScheduler.shared
 
     @Environment(\.modelContext) private var modelContext
+    @Environment(\.scenePhase) private var scenePhase
     @Query(sort: \CaptureItem.createdAt, order: .reverse) private var items: [CaptureItem]
     @Query(sort: \CaptureContext.updatedAt, order: .reverse) private var contexts: [CaptureContext]
     @Query(sort: \ProposedAction.confidence, order: .reverse) private var proposedActions: [ProposedAction]
@@ -118,12 +120,21 @@ struct HomeView: View {
             .sheet(isPresented: $showingCapture) {
                 CaptureSheet(container: container)
             }
+            .task {
+                guard !ProcessInfo.processInfo.arguments.contains(where: { $0.hasPrefix("--ui-testing") }) else { return }
+                try? RemindMeIntentService().applyPendingIntents(modelContext: modelContext)
+            }
             .task(id: pendingIDs) {
                 guard !ProcessInfo.processInfo.arguments.contains(where: { $0.hasPrefix("--ui-testing") }) else { return }
                 for item in items where item.enrichmentState == .pending {
                     guard !Task.isCancelled else { return }
                     await coordinator.process(item, contexts: contexts, modelContext: modelContext)
                 }
+            }
+            .onChange(of: scenePhase) { _, phase in
+                guard phase == .background else { return }
+                guard !ProcessInfo.processInfo.arguments.contains(where: { $0.hasPrefix("--ui-testing") }) else { return }
+                backgroundScheduler.scheduleProcessing(earliestBeginDate: Date(timeIntervalSinceNow: 60))
             }
         }
     }

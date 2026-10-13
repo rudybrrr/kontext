@@ -333,11 +333,15 @@ struct ReminderApprovalSheet: View {
     var body: some View {
         NavigationStack {
             Form {
-                Section("Reminder") {
+                Section(action.kind == .followUp ? "Read later" : "Reminder") {
                     TextField("Title", text: $title)
                     Toggle("Due date", isOn: $hasDue)
                     if hasDue {
                         DatePicker("Due", selection: $due)
+                    }
+                    if let url = action.url, let link = URL(string: url) {
+                        Link(url, destination: link)
+                            .font(.caption)
                     }
                     if let span = action.sourceSpan {
                         Text(span)
@@ -346,7 +350,7 @@ struct ReminderApprovalSheet: View {
                     }
                 }
             }
-            .navigationTitle("Approve reminder")
+            .navigationTitle(action.kind == .followUp ? "Approve read reminder" : "Approve reminder")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
