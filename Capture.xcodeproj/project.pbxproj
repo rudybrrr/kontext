@@ -39,6 +39,12 @@
 		DA4FFEA082DADC517DB338B6 /* SharePayloadParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E8995540DD1A811B6F1AF0 /* SharePayloadParser.swift */; };
 		DB84DA3B38EC148B5DEBE4E9 /* CaptureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F4F98D9C8D14B85F5E7CC7 /* CaptureUITests.swift */; };
 		F21DADEA8A46DA2FEADFD62E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3BA091ED8328F5F8A92A06 /* HomeView.swift */; };
+		1A2B3C4D5E6F708192A3B4C1 /* ActionCandidate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F708192A3B4C0 /* ActionCandidate.swift */; };
+		1A2B3C4D5E6F708192A3B4C3 /* ActionExtracting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F708192A3B4C2 /* ActionExtracting.swift */; };
+		1A2B3C4D5E6F708192A3B4C5 /* DeterministicActionExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F708192A3B4C4 /* DeterministicActionExtractor.swift */; };
+		1A2B3C4D5E6F708192A3B4C7 /* FoundationModelActionExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F708192A3B4C6 /* FoundationModelActionExtractor.swift */; };
+		1A2B3C4D5E6F708192A3B4C9 /* ActionCandidateMerger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F708192A3B4C8 /* ActionCandidateMerger.swift */; };
+		1A2B3C4D5E6F708192A3B4CB /* ActionExtractionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F708192A3B4CA /* ActionExtractionTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,12 +119,23 @@
 		FD042138E686E3CC239E63A4 /* SearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTests.swift; sourceTree = "<group>"; };
 		FD1E00B5A031F74C7832F73E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		FF6D127320F7C2E50063D332 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F708192A3B4C0 /* ActionCandidate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionCandidate.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F708192A3B4C2 /* ActionExtracting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionExtracting.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F708192A3B4C4 /* DeterministicActionExtractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeterministicActionExtractor.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F708192A3B4C6 /* FoundationModelActionExtractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundationModelActionExtractor.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F708192A3B4C8 /* ActionCandidateMerger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionCandidateMerger.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F708192A3B4CA /* ActionExtractionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionExtractionTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
 		0072612B00F0D0744186345B /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				1A2B3C4D5E6F708192A3B4C0 /* ActionCandidate.swift */,
+				1A2B3C4D5E6F708192A3B4C8 /* ActionCandidateMerger.swift */,
+				1A2B3C4D5E6F708192A3B4C2 /* ActionExtracting.swift */,
+				1A2B3C4D5E6F708192A3B4C4 /* DeterministicActionExtractor.swift */,
+				1A2B3C4D5E6F708192A3B4C6 /* FoundationModelActionExtractor.swift */,
 				CCAF8AA9E277F2E991824332 /* ContextAssignmentService.swift */,
 				B7B811D1A83059D205691F31 /* EmbeddingService.swift */,
 				2060D765067731E0B4447765 /* EnrichmentCoordinator.swift */,
@@ -168,6 +185,7 @@
 		7DC9DCD1962B144C2483E0A1 /* CaptureTests */ = {
 			isa = PBXGroup;
 			children = (
+				1A2B3C4D5E6F708192A3B4CA /* ActionExtractionTests.swift */,
 				811D68B9374631D002D64C9F /* ContextAssignmentTests.swift */,
 				12EBC251902488B024D5DAF1 /* EnrichmentTests.swift */,
 				B1FF02C08C8ABF6C05A60B19 /* PersistenceTests.swift */,
@@ -351,6 +369,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A2B3C4D5E6F708192A3B4CB /* ActionExtractionTests.swift in Sources */,
 				95F19C18B885078825BD36F0 /* ContextAssignmentTests.swift in Sources */,
 				7081114CEC7F1089120EF952 /* EnrichmentTests.swift in Sources */,
 				AE1234E4A013D6A9B19D6D1E /* PersistenceTests.swift in Sources */,
@@ -376,6 +395,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A2B3C4D5E6F708192A3B4C1 /* ActionCandidate.swift in Sources */,
+				1A2B3C4D5E6F708192A3B4C9 /* ActionCandidateMerger.swift in Sources */,
+				1A2B3C4D5E6F708192A3B4C3 /* ActionExtracting.swift in Sources */,
+				1A2B3C4D5E6F708192A3B4C5 /* DeterministicActionExtractor.swift in Sources */,
+				1A2B3C4D5E6F708192A3B4C7 /* FoundationModelActionExtractor.swift in Sources */,
 				A7A8E342159E531AF3FF6622 /* CaptureApp.swift in Sources */,
 				A9C94904C203884061029AE9 /* CapturePersistence.swift in Sources */,
 				35977FFE24872A558694BFE7 /* CaptureSheet.swift in Sources */,

@@ -15,6 +15,19 @@ enum EnrichmentState: String, Codable, Sendable {
     case failed
 }
 
+enum ProposedActionKind: String, Codable, CaseIterable, Sendable {
+    case event
+    case reminder
+    case followUp
+}
+
+enum ProposedActionStatus: String, Codable, Sendable {
+    case proposed
+    case approved
+    case dismissed
+    case failed
+}
+
 @Model
 final class CaptureItem {
     @Attribute(.unique) var id: UUID
@@ -33,6 +46,7 @@ final class CaptureItem {
     var embeddingData: Data?
     var contextConfidence: Double?
     var context: CaptureContext?
+    @Relationship(deleteRule: .cascade, inverse: \ProposedAction.captureItem) var proposedActions: [ProposedAction]
 
     init(
         id: UUID = UUID(),
@@ -53,6 +67,7 @@ final class CaptureItem {
         self.thumbnailPath = thumbnailPath
         tags = []
         enrichmentState = .pending
+        proposedActions = []
     }
 
     var canonicalText: String {
@@ -87,5 +102,56 @@ final class CaptureContext {
         updatedAt = createdAt
         self.isPinned = isPinned
         items = []
+    }
+}
+
+@Model
+final class ProposedAction {
+    @Attribute(.unique) var id: UUID
+    var kind: ProposedActionKind
+    var title: String
+    var start: Date?
+    var end: Date?
+    var isAllDay: Bool
+    var due: Date?
+    var location: String?
+    var people: [String]
+    var url: String?
+    var sourceSpan: String?
+    var confidence: Double
+    var status: ProposedActionStatus
+    var ekIdentifier: String?
+    var captureItem: CaptureItem?
+
+    init(
+        id: UUID = UUID(),
+        kind: ProposedActionKind,
+        title: String,
+        start: Date? = nil,
+        end: Date? = nil,
+        isAllDay: Bool = false,
+        due: Date? = nil,
+        location: String? = nil,
+        people: [String] = [],
+        url: String? = nil,
+        sourceSpan: String? = nil,
+        confidence: Double,
+        status: ProposedActionStatus = .proposed,
+        ekIdentifier: String? = nil
+    ) {
+        self.id = id
+        self.kind = kind
+        self.title = title
+        self.start = start
+        self.end = end
+        self.isAllDay = isAllDay
+        self.due = due
+        self.location = location
+        self.people = people
+        self.url = url
+        self.sourceSpan = sourceSpan
+        self.confidence = confidence
+        self.status = status
+        self.ekIdentifier = ekIdentifier
     }
 }

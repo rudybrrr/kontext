@@ -823,7 +823,9 @@ Kontext is not currently trying to become:
 * a project-management platform
 * an AI wrapper around a CRUD database
 
-Tasks, calendar, finance, productivity analytics, and other vertical features should only be considered if they naturally emerge from the context system later.
+Capture may surface proposed events, reminders, and follow-ups from captured context, but only as suggestions the user approves. Apple Calendar and Reminders hold the approved records; Kontext must not become another task manager or autonomous calendar.
+
+Tasks, finance, productivity analytics, and other vertical features should only be considered if they naturally emerge from the context system later and respect the propose-only, user-approves boundary.
 
 ---
 

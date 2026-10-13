@@ -14,7 +14,9 @@ The working name and identifiers are temporary:
 
 The MVP includes only capture, shared local persistence, on-device content extraction and enrichment, automatic context assignment, local semantic plus lexical search, an iOS Share Extension, and manual context correction.
 
-It excludes accounts, backend or cloud sync, external AI, tasks, reminders, calendar, agents, integrations, social/collaboration features, subscriptions, Mac/continuity features, and knowledge-graph visualization.
+It excludes accounts, backend or cloud sync, external AI, agents, integrations, social/collaboration features, subscriptions, Mac/continuity features, and knowledge-graph visualization.
+
+Capture may propose calendar events, reminders, and follow-ups from captured text, but only as user-approved suggestions. Apple Calendar and Reminders hold approved data; Capture is not a task manager and never writes events or reminders externally without explicit user approval.
 
 ## Capture and storage
 
@@ -46,7 +48,7 @@ SwiftUI provides a native `NavigationStack` home with quick capture, recent cont
 
 ## Verification
 
-The app and extension must build for the installed iOS 26 simulator SDK. Unit tests cover persistence, vectors, ranking, assignment, fallback enrichment, and share-payload normalization. A UI smoke test launches the app, saves text, and finds it on Home. Foundation Model outputs are never test dependencies.
+The app and extension must build for the installed iOS 26 simulator SDK. Unit tests cover persistence, vectors, ranking, assignment, fallback enrichment, proposed-action extraction and merging, and share-payload normalization. A UI smoke test launches the app, saves text, and finds it on Home. Foundation Model outputs are never test dependencies.
 
 ## Known MVP boundaries
 
