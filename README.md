@@ -1,4 +1,6 @@
-# Capture
+# Capture (Kontext)
+
+The public product name is **Kontext** (see the [marketing site](site/) and [`EVALS.md`](EVALS.md)). The iOS target and bundle identifiers still use the working name **Capture** until display names are renamed in Xcode.
 
 Capture is an iPhone-first, local-first place for useful text, links, and images. It saves first, enriches on-device, groups captures into flexible contexts, and combines exact-term and semantic search so you do not need to maintain folders.
 
@@ -120,3 +122,9 @@ If NaturalLanguage has no sentence embedding for the device or language, exact a
 - Share-sheet presentation, Photos selection, and production App Group provisioning still require final physical-device checks for a shipping build
 
 The approved boundary is captured in [`docs/MVP_SPEC.md`](docs/MVP_SPEC.md); the executed sequence is in [`docs/IMPLEMENTATION_PLAN.md`](docs/IMPLEMENTATION_PLAN.md).
+
+## Marketing site & evals
+
+- **Site:** [`site/`](site/) — Next.js landing page for Kontext (deploy the `/site` directory to Vercel). Run `npm install && npm run build` inside `site/`.
+- **Evals:** [`EVALS.md`](EVALS.md) — on-device `CaptureEvals` fixtures, metrics, and quality targets.
+- **Demo:** [`docs/DEMO_SCRIPT.md`](docs/DEMO_SCRIPT.md) — 60–90s shot list for capture → propose → approve → search.
