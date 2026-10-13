@@ -13,7 +13,7 @@ struct SettingsView: View {
             }
 
             Section("Privacy") {
-                Text("Your captures, images, organization, and search index stay on this device. Capture has no account, analytics, backend, or external AI calls.")
+                Text("Your captures, images, organization, and search index stay on this device. Kontext has no account, analytics, backend, or external AI calls.")
             }
 
             Section("About") {

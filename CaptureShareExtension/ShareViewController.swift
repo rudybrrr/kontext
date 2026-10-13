@@ -106,5 +106,5 @@ final class ShareViewController: UIViewController {
 
 private enum ShareExtensionError: LocalizedError {
     case saveFailed
-    var errorDescription: String? { "Capture could not save the shared item." }
+    var errorDescription: String? { "Kontext could not save the shared item." }
 }

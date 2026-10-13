@@ -38,13 +38,13 @@ targets:
         PRODUCT_BUNDLE_IDENTIFIER: com.rudy.capture
         PRODUCT_NAME: Capture
         GENERATE_INFOPLIST_FILE: YES
-        INFOPLIST_KEY_CFBundleDisplayName: Capture
+        INFOPLIST_KEY_CFBundleDisplayName: Kontext
         INFOPLIST_KEY_UILaunchScreen_Generation: YES
         INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
         INFOPLIST_KEY_UISupportedInterfaceOrientations: UIInterfaceOrientationPortrait
         INFOPLIST_KEY_NSHumanReadableCopyright: ""
-        INFOPLIST_KEY_NSCalendarsWriteOnlyAccessUsageDescription: "Capture adds calendar events only when you approve a suggested action."
-        INFOPLIST_KEY_NSRemindersFullAccessUsageDescription: "Capture adds reminders only when you approve a suggested action."
+        INFOPLIST_KEY_NSCalendarsWriteOnlyAccessUsageDescription: "Kontext adds calendar events only when you approve a suggested action."
+        INFOPLIST_KEY_NSRemindersFullAccessUsageDescription: "Kontext adds reminders only when you approve a suggested action."
     dependencies:
       - target: CaptureShareExtension
         embed: true
@@ -57,7 +57,7 @@ targets:
     info:
       path: CaptureShareExtension/Info.plist
       properties:
-        CFBundleDisplayName: Capture
+        CFBundleDisplayName: Kontext
         CFBundleShortVersionString: "$(MARKETING_VERSION)"
         CFBundleVersion: "$(CURRENT_PROJECT_VERSION)"
         NSExtension:
