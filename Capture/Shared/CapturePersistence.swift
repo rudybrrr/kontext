@@ -6,7 +6,7 @@ enum CapturePersistence {
 
     @MainActor
     static func makeContainer(inMemory: Bool = false) throws -> ModelContainer {
-        let schema = Schema([CaptureItem.self, CaptureContext.self])
+        let schema = Schema([CaptureItem.self, CaptureContext.self, ProposedAction.self])
         let configuration: ModelConfiguration
 
         if inMemory {

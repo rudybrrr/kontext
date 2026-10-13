@@ -9,19 +9,22 @@ final class EnrichmentCoordinator {
     private let ocr: OCRService
     private let linkMetadata: LinkMetadataService
     private let assignment = ContextAssignmentService()
+    private let actionExtractor: any ActionExtracting
 
     init(
         enricher: any EnrichmentProviding = ResilientEnrichmentService(),
         embedder: any EmbeddingProviding = NaturalLanguageEmbeddingService(),
         mediaStore: MediaStore = MediaStore(),
         ocr: OCRService = OCRService(),
-        linkMetadata: LinkMetadataService = LinkMetadataService()
+        linkMetadata: LinkMetadataService = LinkMetadataService(),
+        actionExtractor: any ActionExtracting = ResilientActionExtractionService()
     ) {
         self.enricher = enricher
         self.embedder = embedder
         self.mediaStore = mediaStore
         self.ocr = ocr
         self.linkMetadata = linkMetadata
+        self.actionExtractor = actionExtractor
     }
 
     func process(_ item: CaptureItem, contexts _: [CaptureContext], modelContext: ModelContext) async {
@@ -68,6 +71,9 @@ final class EnrichmentCoordinator {
 
             let vector = await embedder.vector(for: [result.title, result.summary, text, result.tags.joined(separator: " ")].joined(separator: "\n"))
             item.embeddingData = vector.map(VectorCodec.encode)
+            if await extractActions(for: item, text: text, modelContext: modelContext) {
+                extractionWasPartial = true
+            }
             try await assign(item, result: result, vector: vector, contexts: contexts, modelContext: modelContext)
             item.enrichmentState = extractionWasPartial ? .partial : .completed
             item.updatedAt = .now
@@ -76,6 +82,24 @@ final class EnrichmentCoordinator {
             item.enrichmentState = .failed
             item.updatedAt = .now
             try? modelContext.save()
+        }
+    }
+
+    private func extractActions(for item: CaptureItem, text: String, modelContext: ModelContext) async -> Bool {
+        do {
+            let candidates = try await actionExtractor.extractActions(from: text, referenceDate: item.createdAt)
+            for existing in item.proposedActions {
+                modelContext.delete(existing)
+            }
+            item.proposedActions.removeAll()
+            for candidate in candidates {
+                let action = candidate.asProposedAction()
+                action.captureItem = item
+                modelContext.insert(action)
+            }
+            return false
+        } catch {
+            return true
         }
     }
 
