@@ -1,5 +1,15 @@
+import SwiftData
 import XCTest
 @testable import Capture
+
+private struct EvalFixedEnricher: EnrichmentProviding {
+    let result: EnrichmentResult
+    func enrich(text: String, contexts: [EnrichmentContext]) async throws -> EnrichmentResult { result }
+}
+
+private struct EvalNoEmbedding: EmbeddingProviding {
+    func vector(for text: String) async -> [Double]? { nil }
+}
 
 @MainActor
 final class CaptureEvalsTests: XCTestCase {
@@ -25,6 +35,34 @@ final class CaptureEvalsTests: XCTestCase {
 
         XCTAssertFalse(report.actionPipelines.isEmpty)
         XCTAssertEqual(report.searchPipelines.count, 3)
+    }
+
+    func testBackgroundSchedulerRegistersAndDrainsPendingCapture() async throws {
+        let scheduler = FakeCaptureBackgroundScheduler()
+        let container = try CapturePersistence.makeContainer(inMemory: true)
+        let item = try CaptureStore(container: container).captureText("BG eval pending capture")
+        let result = EnrichmentResult(
+            title: "BG eval pending capture",
+            summary: "Eval",
+            tags: [],
+            suggestedContextName: nil,
+            suggestedContextSummary: nil,
+            contextConfidence: 0
+        )
+        let coordinator = EnrichmentCoordinator(
+            enricher: EvalFixedEnricher(result: result),
+            embedder: EvalNoEmbedding()
+        )
+        var drained = false
+        scheduler.register {
+            let drainer = CaptureBackgroundDrainer(coordinator: coordinator)
+            try? await drainer.drain(modelContext: container.mainContext)
+            drained = true
+        }
+        scheduler.scheduleProcessing(earliestBeginDate: .now)
+        await scheduler.runProcessing()
+        XCTAssertTrue(drained)
+        XCTAssertEqual(item.enrichmentState, .completed)
     }
 
     func testModelOnlyPipelineSkippedWhenUnavailable() async throws {
