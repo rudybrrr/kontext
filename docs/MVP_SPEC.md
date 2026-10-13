@@ -20,6 +20,8 @@ Capture may propose calendar events, reminders, and follow-ups from captured tex
 
 Week 2 adds in-app review UI (suggested-action cards, a Home “Needs review” list), write-only Calendar and full Reminders access requested only on first approval, EventKit commit behind `ActionCommitting`, and deep links to Calendar or Reminders after approval. Capture does not read existing calendars.
 
+Week 3 adds URL “Read …” follow-up proposals, a Share Extension “Remind me” intent flag, webpage body extraction for URL enrichment, `BGProcessingTask` background draining of pending enrichment/extraction, and Settings status for on-device action extraction (no cloud fallback).
+
 ## Capture and storage
 
 - Capture text, URLs, and Photos images inside the app.

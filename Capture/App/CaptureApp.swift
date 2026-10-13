@@ -12,9 +12,13 @@ import SwiftData
 
 @main
 struct CaptureApp: App {
+    @UIApplicationDelegateAdaptor(CaptureAppDelegate.self) private var appDelegate
     private let container: ModelContainer
+    private let backgroundScheduler: CaptureBackgroundScheduling
 
     init() {
+        let scheduler = CaptureBackgroundTaskScheduler.shared
+        backgroundScheduler = scheduler
         do {
             container = try CapturePersistence.makeContainer(
                 inMemory: ProcessInfo.processInfo.arguments.contains("--ui-testing")
@@ -22,11 +26,17 @@ struct CaptureApp: App {
         } catch {
             fatalError("Capture could not open its local store: \(error.localizedDescription)")
         }
+
+        guard !ProcessInfo.processInfo.arguments.contains(where: { $0.hasPrefix("--ui-testing") }) else { return }
+        let modelContainer = container
+        scheduler.register {
+            await CaptureBackgroundDrainer.drainStoredCaptures(container: modelContainer)
+        }
     }
 
     var body: some Scene {
         WindowGroup {
-            HomeView(container: container)
+            HomeView(container: container, backgroundScheduler: backgroundScheduler)
         }
         .modelContainer(container)
     }

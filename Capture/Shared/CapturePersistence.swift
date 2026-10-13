@@ -54,11 +54,13 @@ final class CaptureStore {
     }
 
     @discardableResult
-    func captureURL(_ url: URL) throws -> CaptureItem {
+    func captureURL(_ url: URL, remindMeIntent: Bool = false) throws -> CaptureItem {
         guard let scheme = url.scheme?.lowercased(), ["http", "https"].contains(scheme), url.host != nil else {
             throw CaptureStoreError.unsupportedURL
         }
-        return try insert(CaptureItem(kind: .url, sourceURL: url.absoluteString))
+        let item = CaptureItem(kind: .url, sourceURL: url.absoluteString)
+        item.remindMeIntent = remindMeIntent
+        return try insert(item)
     }
 
     @discardableResult

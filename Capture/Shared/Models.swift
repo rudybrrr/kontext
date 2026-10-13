@@ -46,6 +46,7 @@ final class CaptureItem {
     var embeddingData: Data?
     var contextConfidence: Double?
     var context: CaptureContext?
+    var remindMeIntent: Bool
     @Relationship(deleteRule: .cascade, inverse: \ProposedAction.captureItem) var proposedActions: [ProposedAction]
 
     init(
@@ -67,6 +68,7 @@ final class CaptureItem {
         self.thumbnailPath = thumbnailPath
         tags = []
         enrichmentState = .pending
+        remindMeIntent = false
         proposedActions = []
     }
 

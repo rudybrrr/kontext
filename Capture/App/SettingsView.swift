@@ -8,6 +8,7 @@ struct SettingsView: View {
         Form {
             Section("On-device intelligence") {
                 LabeledContent("Apple Intelligence", value: modelStatus)
+                LabeledContent("Action extraction", value: actionExtractionStatus)
                 LabeledContent("Semantic search", value: embeddingStatus)
             }
 
@@ -29,6 +30,13 @@ struct SettingsView: View {
         switch FoundationModelEnrichmentService.status {
         case .available: "Available"
         case .unavailable(let reason): reason
+        }
+    }
+
+    private var actionExtractionStatus: String {
+        switch FoundationModelActionExtractor.status {
+        case .available: "Foundation Models available"
+        case .unavailable(let reason): "Deterministic only (\(reason))"
         }
     }
 

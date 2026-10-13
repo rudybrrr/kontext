@@ -8,6 +8,7 @@ final class EnrichmentCoordinator {
     private let mediaStore: MediaStore
     private let ocr: OCRService
     private let linkMetadata: LinkMetadataService
+    private let webpageTextFetcher: WebpageTextFetcher
     private let assignment = ContextAssignmentService()
     private let actionExtractor: any ActionExtracting
 
@@ -17,6 +18,7 @@ final class EnrichmentCoordinator {
         mediaStore: MediaStore = MediaStore(),
         ocr: OCRService = OCRService(),
         linkMetadata: LinkMetadataService = LinkMetadataService(),
+        webpageTextFetcher: WebpageTextFetcher = WebpageTextFetcher(),
         actionExtractor: any ActionExtracting = ResilientActionExtractionService()
     ) {
         self.enricher = enricher
@@ -24,6 +26,7 @@ final class EnrichmentCoordinator {
         self.mediaStore = mediaStore
         self.ocr = ocr
         self.linkMetadata = linkMetadata
+        self.webpageTextFetcher = webpageTextFetcher
         self.actionExtractor = actionExtractor
     }
 
@@ -40,9 +43,18 @@ final class EnrichmentCoordinator {
                 text = item.rawText ?? ""
             case .url:
                 text = item.sourceURL ?? ""
-                if let source = item.sourceURL, let url = URL(string: source), let metadata = await linkMetadata.metadata(for: url) {
-                    if item.title == nil { item.title = metadata.title }
-                    text += metadata.title.map { "\n\($0)" } ?? ""
+                if let source = item.sourceURL, let url = URL(string: source) {
+                    if let metadata = await linkMetadata.metadata(for: url) {
+                        if item.title == nil { item.title = metadata.title }
+                        text += metadata.title.map { "\n\($0)" } ?? ""
+                    }
+                    do {
+                        let pageText = try await webpageTextFetcher.fetchText(from: url)
+                        item.extractedText = pageText
+                        text += "\n\(pageText)"
+                    } catch {
+                        extractionWasPartial = true
+                    }
                 }
             case .image:
                 text = "Image capture"
@@ -87,7 +99,8 @@ final class EnrichmentCoordinator {
 
     private func extractActions(for item: CaptureItem, text: String, modelContext: ModelContext) async -> Bool {
         do {
-            let candidates = try await actionExtractor.extractActions(from: text, referenceDate: item.createdAt)
+            var candidates = try await actionExtractor.extractActions(from: text, referenceDate: item.createdAt)
+            URLFollowUpProposalService.appendReadFollowUpIfNeeded(to: &candidates, item: item)
             for existing in item.proposedActions {
                 modelContext.delete(existing)
             }

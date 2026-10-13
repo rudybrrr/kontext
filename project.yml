@@ -21,6 +21,13 @@ targets:
     sources:
       - Capture/Shared
       - Capture/App
+    info:
+      path: Capture/App/Supplemental-Info.plist
+      properties:
+        BGTaskSchedulerPermittedIdentifiers:
+          - com.rudy.capture.processing
+        UIBackgroundModes:
+          - processing
     entitlements:
       path: Capture/App/Capture.entitlements
       properties:
