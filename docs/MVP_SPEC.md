@@ -22,6 +22,8 @@ Week 2 adds in-app review UI (suggested-action cards, a Home “Needs review” 
 
 Week 3 adds URL “Read …” follow-up proposals, a Share Extension “Remind me” intent flag, webpage body extraction for URL enrichment, `BGProcessingTask` background draining of pending enrichment/extraction, and Settings status for on-device action extraction (no cloud fallback).
 
+The `CaptureEvals` target (see `EVALS.md`) runs labelled fixtures for extraction and search quality on physical devices.
+
 ## Capture and storage
 
 - Capture text, URLs, and Photos images inside the app.

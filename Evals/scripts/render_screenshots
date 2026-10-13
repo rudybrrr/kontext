@@ -1,0 +1,46 @@
+#!/usr/bin/env python3
+"""Render optional PNG fixtures for screenshot-style eval captures."""
+from __future__ import annotations
+
+import json
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+OUT = ROOT / "fixtures" / "screenshots"
+
+
+def main() -> None:
+    captures_path = ROOT / "captures.json"
+    data = json.loads(captures_path.read_text())
+    OUT.mkdir(parents=True, exist_ok=True)
+
+    try:
+        from PIL import Image, ImageDraw, ImageFont
+    except ImportError:
+        print("Pillow not installed; skipping PNG generation (imagePath remains optional).")
+        return
+
+    font = ImageFont.load_default()
+    for cap in data.get("captures", []):
+        if cap.get("kind") != "screenshot":
+            continue
+        rel = cap.get("imagePath")
+        if not rel:
+            continue
+        path = Path(rel)
+        if not str(path).startswith("Evals/"):
+            continue
+        out = Path(__file__).resolve().parents[2] / path
+        out.parent.mkdir(parents=True, exist_ok=True)
+        img = Image.new("RGB", (640, 360), color=(248, 248, 252))
+        draw = ImageDraw.Draw(img)
+        text = cap.get("text", "")
+        draw.multiline_text((24, 24), text[:500], fill=(20, 20, 20), font=font, spacing=4)
+        img.save(out)
+        print(f"Wrote {out}")
+
+    print("Screenshot rendering complete.")
+
+
+if __name__ == "__main__":
+    main()

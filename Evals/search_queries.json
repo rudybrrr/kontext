@@ -1,0 +1,397 @@
+{
+  "version": 1,
+  "queries": [
+    {
+      "id": "q-001",
+      "query": "marina dinner priya",
+      "relevantCaptureIds": [
+        "cap-002"
+      ]
+    },
+    {
+      "id": "q-002",
+      "query": "standup fri wework",
+      "relevantCaptureIds": [
+        "cap-001",
+        "cap-073",
+        "cap-083",
+        "cap-093"
+      ]
+    },
+    {
+      "id": "q-003",
+      "query": "dentist raffles",
+      "relevantCaptureIds": [
+        "cap-006",
+        "cap-043",
+        "cap-050",
+        "cap-057",
+        "cap-064"
+      ]
+    },
+    {
+      "id": "q-004",
+      "query": "swift concurrency actors",
+      "relevantCaptureIds": [
+        "cap-017",
+        "cap-071",
+        "cap-081",
+        "cap-091"
+      ]
+    },
+    {
+      "id": "q-005",
+      "query": "blood drive community",
+      "relevantCaptureIds": [
+        "cap-021"
+      ]
+    },
+    {
+      "id": "q-006",
+      "query": "zumba bishan",
+      "relevantCaptureIds": [
+        "cap-042",
+        "cap-049",
+        "cap-056",
+        "cap-063",
+        "cap-070"
+      ]
+    },
+    {
+      "id": "q-007",
+      "query": "jazz esplanade tickets",
+      "relevantCaptureIds": [
+        "cap-075",
+        "cap-085",
+        "cap-095"
+      ]
+    },
+    {
+      "id": "q-008",
+      "query": "passport ica pickup",
+      "relevantCaptureIds": [
+        "cap-006",
+        "cap-030",
+        "cap-080",
+        "cap-090",
+        "cap-100"
+      ]
+    },
+    {
+      "id": "q-009",
+      "query": "school holiday october",
+      "relevantCaptureIds": [
+        "cap-008"
+      ]
+    },
+    {
+      "id": "q-010",
+      "query": "whatsapp 金沙",
+      "relevantCaptureIds": [
+        "cap-009"
+      ]
+    },
+    {
+      "id": "q-011",
+      "query": "telegram hackathon block",
+      "relevantCaptureIds": [
+        "cap-010"
+      ]
+    },
+    {
+      "id": "q-012",
+      "query": "hdb punggol viewing",
+      "relevantCaptureIds": [
+        "cap-032",
+        "cap-072",
+        "cap-082",
+        "cap-092"
+      ]
+    },
+    {
+      "id": "q-013",
+      "query": "board meeting mbfc",
+      "relevantCaptureIds": [
+        "cap-008",
+        "cap-013",
+        "cap-028",
+        "cap-039",
+        "cap-047",
+        "cap-054",
+        "cap-061",
+        "cap-068"
+      ]
+    },
+    {
+      "id": "q-014",
+      "query": "piano buona vista",
+      "relevantCaptureIds": [
+        "cap-020"
+      ]
+    },
+    {
+      "id": "q-015",
+      "query": "science camp kids",
+      "relevantCaptureIds": [
+        "cap-035"
+      ]
+    },
+    {
+      "id": "q-016",
+      "query": "utilities pay reminder",
+      "relevantCaptureIds": [
+        "cap-005",
+        "cap-033"
+      ]
+    },
+    {
+      "id": "q-017",
+      "query": "laksa recipe coconut",
+      "relevantCaptureIds": [
+        "cap-074",
+        "cap-084",
+        "cap-094"
+      ]
+    },
+    {
+      "id": "q-018",
+      "query": "typography bookmark",
+      "relevantCaptureIds": [
+        "cap-022"
+      ]
+    },
+    {
+      "id": "q-019",
+      "query": "parking coupon",
+      "relevantCaptureIds": [
+        "cap-044",
+        "cap-051",
+        "cap-058",
+        "cap-065"
+      ]
+    },
+    {
+      "id": "q-020",
+      "query": "whiteboard sprint goals",
+      "relevantCaptureIds": [
+        "cap-047",
+        "cap-054",
+        "cap-061",
+        "cap-068"
+      ]
+    },
+    {
+      "id": "q-021",
+      "query": "meeting",
+      "relevantCaptureIds": [
+        "cap-013",
+        "cap-028",
+        "cap-039",
+        "cap-079",
+        "cap-089",
+        "cap-099"
+      ]
+    },
+    {
+      "id": "q-022",
+      "query": "flyer:",
+      "relevantCaptureIds": [
+        "cap-024",
+        "cap-042",
+        "cap-049",
+        "cap-056",
+        "cap-063",
+        "cap-070"
+      ]
+    },
+    {
+      "id": "q-023",
+      "query": "night",
+      "relevantCaptureIds": [
+        "cap-075",
+        "cap-078",
+        "cap-085",
+        "cap-088",
+        "cap-095",
+        "cap-098"
+      ]
+    },
+    {
+      "id": "q-024",
+      "query": "notes",
+      "relevantCaptureIds": [
+        "cap-017",
+        "cap-036",
+        "cap-077",
+        "cap-087",
+        "cap-097"
+      ]
+    },
+    {
+      "id": "q-025",
+      "query": "screenshot:",
+      "relevantCaptureIds": [
+        "cap-041",
+        "cap-048",
+        "cap-055",
+        "cap-062",
+        "cap-069"
+      ]
+    },
+    {
+      "id": "q-026",
+      "query": "legend",
+      "relevantCaptureIds": [
+        "cap-041",
+        "cap-048",
+        "cap-055",
+        "cap-062",
+        "cap-069"
+      ]
+    },
+    {
+      "id": "q-027",
+      "query": "only.",
+      "relevantCaptureIds": [
+        "cap-041",
+        "cap-048",
+        "cap-055",
+        "cap-062",
+        "cap-069"
+      ]
+    },
+    {
+      "id": "q-028",
+      "query": "zumba",
+      "relevantCaptureIds": [
+        "cap-042",
+        "cap-049",
+        "cap-056",
+        "cap-063",
+        "cap-070"
+      ]
+    },
+    {
+      "id": "q-029",
+      "query": "class",
+      "relevantCaptureIds": [
+        "cap-042",
+        "cap-049",
+        "cap-056",
+        "cap-063",
+        "cap-070"
+      ]
+    },
+    {
+      "id": "q-030",
+      "query": "bishan",
+      "relevantCaptureIds": [
+        "cap-042",
+        "cap-049",
+        "cap-056",
+        "cap-063",
+        "cap-070"
+      ]
+    },
+    {
+      "id": "q-031",
+      "query": "standup",
+      "relevantCaptureIds": [
+        "cap-001",
+        "cap-073",
+        "cap-083",
+        "cap-093"
+      ]
+    },
+    {
+      "id": "q-032",
+      "query": "swift",
+      "relevantCaptureIds": [
+        "cap-017",
+        "cap-071",
+        "cap-081",
+        "cap-091"
+      ]
+    },
+    {
+      "id": "q-033",
+      "query": "actors",
+      "relevantCaptureIds": [
+        "cap-017",
+        "cap-071",
+        "cap-081",
+        "cap-091"
+      ]
+    },
+    {
+      "id": "q-034",
+      "query": "daily",
+      "relevantCaptureIds": [
+        "cap-025",
+        "cap-073",
+        "cap-083",
+        "cap-093"
+      ]
+    },
+    {
+      "id": "q-035",
+      "query": "house",
+      "relevantCaptureIds": [
+        "cap-032",
+        "cap-072",
+        "cap-082",
+        "cap-092"
+      ]
+    },
+    {
+      "id": "q-036",
+      "query": "viewing",
+      "relevantCaptureIds": [
+        "cap-032",
+        "cap-072",
+        "cap-082",
+        "cap-092"
+      ]
+    },
+    {
+      "id": "q-037",
+      "query": "screenshot",
+      "relevantCaptureIds": [
+        "cap-043",
+        "cap-050",
+        "cap-057",
+        "cap-064"
+      ]
+    },
+    {
+      "id": "q-038",
+      "query": "starbucks",
+      "relevantCaptureIds": [
+        "cap-043",
+        "cap-050",
+        "cap-057",
+        "cap-064"
+      ]
+    },
+    {
+      "id": "q-039",
+      "query": "raffles.",
+      "relevantCaptureIds": [
+        "cap-043",
+        "cap-050",
+        "cap-057",
+        "cap-064"
+      ]
+    },
+    {
+      "id": "q-040",
+      "query": "parking",
+      "relevantCaptureIds": [
+        "cap-044",
+        "cap-051",
+        "cap-058",
+        "cap-065"
+      ]
+    }
+  ]
+}

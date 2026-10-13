@@ -100,7 +100,31 @@ targets:
         PRODUCT_BUNDLE_IDENTIFIER: com.rudy.capture.uitests
         GENERATE_INFOPLIST_FILE: YES
         TEST_TARGET_NAME: Capture
+  CaptureEvals:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - CaptureEvals
+    resources:
+      - Evals/captures.json
+      - Evals/search_queries.json
+    dependencies:
+      - target: Capture
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.rudy.capture.evals
+        GENERATE_INFOPLIST_FILE: YES
+        TEST_TARGET_NAME: Capture
 schemes:
+  CaptureEvals:
+    build:
+      targets:
+        Capture: [test]
+        CaptureEvals: [test]
+    test:
+      gatherCoverageData: false
+      targets:
+        - CaptureEvals
   Capture:
     build:
       targets:
