@@ -8,11 +8,16 @@ struct HomeView: View {
     @Environment(\.modelContext) private var modelContext
     @Query(sort: \CaptureItem.createdAt, order: .reverse) private var items: [CaptureItem]
     @Query(sort: \CaptureContext.updatedAt, order: .reverse) private var contexts: [CaptureContext]
+    @Query(sort: \ProposedAction.confidence, order: .reverse) private var proposedActions: [ProposedAction]
     @State private var showingCapture = false
     @State private var coordinator = EnrichmentCoordinator()
 
     private var pendingIDs: [UUID] {
         items.filter { $0.enrichmentState == .pending }.map(\.id)
+    }
+
+    private var needsReviewActions: [ProposedAction] {
+        proposedActions.filter { $0.status == .proposed }
     }
 
     var body: some View {
@@ -32,6 +37,20 @@ struct HomeView: View {
                 .accessibilityIdentifier("quick-capture")
 
                 List {
+                    if !needsReviewActions.isEmpty {
+                        Section("Needs review") {
+                            ForEach(needsReviewActions) { action in
+                                if let item = action.captureItem {
+                                    NavigationLink {
+                                        ItemDetailView(item: item, container: container)
+                                    } label: {
+                                        NeedsReviewRow(action: action, item: item)
+                                    }
+                                }
+                            }
+                        }
+                    }
+
                     if !contexts.isEmpty {
                         Section("Contexts") {
                             ForEach(contexts.prefix(4)) { context in
@@ -107,6 +126,31 @@ struct HomeView: View {
                 }
             }
         }
+    }
+}
+
+private struct NeedsReviewRow: View {
+    let action: ProposedAction
+    let item: CaptureItem
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 4) {
+            HStack {
+                Label(action.kind.displayName, systemImage: action.kind.symbolName)
+                    .font(.subheadline.weight(.semibold))
+                Spacer()
+                Text(action.confidence, format: .percent.precision(.fractionLength(0)))
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            }
+            Text(action.title)
+                .font(.headline)
+                .lineLimit(2)
+            Text(item.displayTitle)
+                .font(.caption)
+                .foregroundStyle(.secondary)
+        }
+        .padding(.vertical, 2)
     }
 }
 

@@ -45,6 +45,10 @@
 		1A2B3C4D5E6F708192A3B4C7 /* FoundationModelActionExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F708192A3B4C6 /* FoundationModelActionExtractor.swift */; };
 		1A2B3C4D5E6F708192A3B4C9 /* ActionCandidateMerger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F708192A3B4C8 /* ActionCandidateMerger.swift */; };
 		1A2B3C4D5E6F708192A3B4CB /* ActionExtractionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F708192A3B4CA /* ActionExtractionTests.swift */; };
+		2B3C4D5E6F708192A3B4C5D1 /* ActionCommitting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3C4D5E6F708192A3B4C5D0 /* ActionCommitting.swift */; };
+		2B3C4D5E6F708192A3B4C5D3 /* ProposedActionApprovalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3C4D5E6F708192A3B4C5D2 /* ProposedActionApprovalService.swift */; };
+		2B3C4D5E6F708192A3B4C5D5 /* ProposedActionViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3C4D5E6F708192A3B4C5D4 /* ProposedActionViews.swift */; };
+		2B3C4D5E6F708192A3B4C5D7 /* ProposedActionApprovalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3C4D5E6F708192A3B4C5D6 /* ProposedActionApprovalTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +129,10 @@
 		1A2B3C4D5E6F708192A3B4C6 /* FoundationModelActionExtractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundationModelActionExtractor.swift; sourceTree = "<group>"; };
 		1A2B3C4D5E6F708192A3B4C8 /* ActionCandidateMerger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionCandidateMerger.swift; sourceTree = "<group>"; };
 		1A2B3C4D5E6F708192A3B4CA /* ActionExtractionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionExtractionTests.swift; sourceTree = "<group>"; };
+		2B3C4D5E6F708192A3B4C5D0 /* ActionCommitting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionCommitting.swift; sourceTree = "<group>"; };
+		2B3C4D5E6F708192A3B4C5D2 /* ProposedActionApprovalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProposedActionApprovalService.swift; sourceTree = "<group>"; };
+		2B3C4D5E6F708192A3B4C5D4 /* ProposedActionViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProposedActionViews.swift; sourceTree = "<group>"; };
+		2B3C4D5E6F708192A3B4C5D6 /* ProposedActionApprovalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProposedActionApprovalTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -136,6 +144,8 @@
 				1A2B3C4D5E6F708192A3B4C2 /* ActionExtracting.swift */,
 				1A2B3C4D5E6F708192A3B4C4 /* DeterministicActionExtractor.swift */,
 				1A2B3C4D5E6F708192A3B4C6 /* FoundationModelActionExtractor.swift */,
+				2B3C4D5E6F708192A3B4C5D0 /* ActionCommitting.swift */,
+				2B3C4D5E6F708192A3B4C5D2 /* ProposedActionApprovalService.swift */,
 				CCAF8AA9E277F2E991824332 /* ContextAssignmentService.swift */,
 				B7B811D1A83059D205691F31 /* EmbeddingService.swift */,
 				2060D765067731E0B4447765 /* EnrichmentCoordinator.swift */,
@@ -159,6 +169,7 @@
 				745EBE71E300C4B7FF273E05 /* SearchView.swift */,
 				FD1E00B5A031F74C7832F73E /* SettingsView.swift */,
 				0072612B00F0D0744186345B /* Services */,
+				2B3C4D5E6F708192A3B4C5D8 /* Views */,
 			);
 			name = App;
 			path = Capture/App;
@@ -182,10 +193,19 @@
 			path = CaptureShareExtension;
 			sourceTree = "<group>";
 		};
+		2B3C4D5E6F708192A3B4C5D8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2B3C4D5E6F708192A3B4C5D4 /* ProposedActionViews.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		7DC9DCD1962B144C2483E0A1 /* CaptureTests */ = {
 			isa = PBXGroup;
 			children = (
 				1A2B3C4D5E6F708192A3B4CA /* ActionExtractionTests.swift */,
+				2B3C4D5E6F708192A3B4C5D6 /* ProposedActionApprovalTests.swift */,
 				811D68B9374631D002D64C9F /* ContextAssignmentTests.swift */,
 				12EBC251902488B024D5DAF1 /* EnrichmentTests.swift */,
 				B1FF02C08C8ABF6C05A60B19 /* PersistenceTests.swift */,
@@ -370,6 +390,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A2B3C4D5E6F708192A3B4CB /* ActionExtractionTests.swift in Sources */,
+				2B3C4D5E6F708192A3B4C5D7 /* ProposedActionApprovalTests.swift in Sources */,
 				95F19C18B885078825BD36F0 /* ContextAssignmentTests.swift in Sources */,
 				7081114CEC7F1089120EF952 /* EnrichmentTests.swift in Sources */,
 				AE1234E4A013D6A9B19D6D1E /* PersistenceTests.swift in Sources */,
@@ -400,6 +421,9 @@
 				1A2B3C4D5E6F708192A3B4C3 /* ActionExtracting.swift in Sources */,
 				1A2B3C4D5E6F708192A3B4C5 /* DeterministicActionExtractor.swift in Sources */,
 				1A2B3C4D5E6F708192A3B4C7 /* FoundationModelActionExtractor.swift in Sources */,
+				2B3C4D5E6F708192A3B4C5D1 /* ActionCommitting.swift in Sources */,
+				2B3C4D5E6F708192A3B4C5D3 /* ProposedActionApprovalService.swift in Sources */,
+				2B3C4D5E6F708192A3B4C5D5 /* ProposedActionViews.swift in Sources */,
 				A7A8E342159E531AF3FF6622 /* CaptureApp.swift in Sources */,
 				A9C94904C203884061029AE9 /* CapturePersistence.swift in Sources */,
 				35977FFE24872A558694BFE7 /* CaptureSheet.swift in Sources */,
@@ -451,7 +475,9 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Capture;
+				INFOPLIST_KEY_NSCalendarsWriteOnlyAccessUsageDescription = "Capture adds calendar events only when you approve a suggested action.";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSRemindersFullAccessUsageDescription = "Capture adds reminders only when you approve a suggested action.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -590,7 +616,9 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Capture;
+				INFOPLIST_KEY_NSCalendarsWriteOnlyAccessUsageDescription = "Capture adds calendar events only when you approve a suggested action.";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSRemindersFullAccessUsageDescription = "Capture adds reminders only when you approve a suggested action.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;

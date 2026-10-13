@@ -18,6 +18,8 @@ It excludes accounts, backend or cloud sync, external AI, agents, integrations, 
 
 Capture may propose calendar events, reminders, and follow-ups from captured text, but only as user-approved suggestions. Apple Calendar and Reminders hold approved data; Capture is not a task manager and never writes events or reminders externally without explicit user approval.
 
+Week 2 adds in-app review UI (suggested-action cards, a Home “Needs review” list), write-only Calendar and full Reminders access requested only on first approval, EventKit commit behind `ActionCommitting`, and deep links to Calendar or Reminders after approval. Capture does not read existing calendars.
+
 ## Capture and storage
 
 - Capture text, URLs, and Photos images inside the app.

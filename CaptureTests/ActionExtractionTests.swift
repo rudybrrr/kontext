@@ -93,7 +93,7 @@ final class ActionExtractionTests: XCTestCase {
         XCTAssertTrue(merged.isEmpty)
     }
 
-    func testMergerRequiresDetectorBackedModelDates() {
+    func testMergerRequiresDetectorBackedModelDates() throws {
         let merger = ActionCandidateMerger()
         let reference = try XCTUnwrap(calendar.date(from: DateComponents(year: 2025, month: 10, day: 9, hour: 9)))
         let invented = try XCTUnwrap(calendar.date(from: DateComponents(year: 2031, month: 1, day: 1, hour: 9)))
