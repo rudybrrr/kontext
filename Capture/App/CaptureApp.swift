@@ -24,7 +24,7 @@ struct CaptureApp: App {
                 inMemory: ProcessInfo.processInfo.arguments.contains("--ui-testing")
             )
         } catch {
-            fatalError("Capture could not open its local store: \(error.localizedDescription)")
+            fatalError("Kontext could not open its local store: \(error.localizedDescription)")
         }
 
         guard !ProcessInfo.processInfo.arguments.contains(where: { $0.hasPrefix("--ui-testing") }) else { return }

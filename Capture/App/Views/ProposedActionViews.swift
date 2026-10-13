@@ -136,9 +136,9 @@ struct SuggestedActionsSection: View {
     private var accessDeniedMessage: String {
         switch accessDeniedKind {
         case .event:
-            "Capture needs write-only Calendar access when you approve an event. Enable it in Settings."
+            "Kontext needs write-only Calendar access when you approve an event. Enable it in Settings."
         case .reminder, .followUp:
-            "Capture needs Reminders access when you approve a reminder. Enable it in Settings."
+            "Kontext needs Reminders access when you approve a reminder. Enable it in Settings."
         case .none:
             ""
         }

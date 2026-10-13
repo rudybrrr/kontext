@@ -31,7 +31,7 @@ enum CaptureStoreError: LocalizedError {
 
     var errorDescription: String? {
         switch self {
-        case .emptyContent: "Capture cannot be empty."
+        case .emptyContent: "Add text, a link, or an image before saving."
         case .unsupportedURL: "Enter a valid HTTP or HTTPS URL."
         }
     }

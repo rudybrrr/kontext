@@ -87,7 +87,7 @@ struct HomeView: View {
                             ContentUnavailableView(
                                 "Nothing captured yet",
                                 systemImage: "tray",
-                                description: Text("Save a thought, link, or screenshot. Capture will organize it after it is safely stored.")
+                                description: Text("Save a thought, link, or screenshot. Kontext will organize it after it is safely stored.")
                             )
                         } else {
                             ForEach(items) { item in
@@ -102,7 +102,7 @@ struct HomeView: View {
                 }
                 .listStyle(.insetGrouped)
             }
-            .navigationTitle("Capture")
+            .navigationTitle("Kontext")
             .toolbar {
                 ToolbarItemGroup(placement: .topBarTrailing) {
                     NavigationLink {
