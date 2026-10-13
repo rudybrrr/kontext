@@ -1,0 +1,1840 @@
+{
+  "version": 1,
+  "timezone": "Asia/Singapore",
+  "captures": [
+    {
+      "id": "cap-001",
+      "kind": "text",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Team standup next Fri 10am at WeWork Beach Road.",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "standup",
+            "team"
+          ],
+          "startISO": "2025-10-12T10:00:00+08:00",
+          "endISO": null,
+          "dueISO": null,
+          "isAllDay": false,
+          "location": "WeWork Beach Road"
+        }
+      ]
+    },
+    {
+      "id": "cap-002",
+      "kind": "text",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Dinner with Priya 12/10/2025 7:30pm at Lau Pa Sat.",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "dinner",
+            "priya"
+          ],
+          "startISO": "2025-10-12T19:30:00+08:00",
+          "endISO": null,
+          "dueISO": null,
+          "isAllDay": false,
+          "location": "Lau Pa Sat"
+        }
+      ]
+    },
+    {
+      "id": "cap-003",
+      "kind": "text",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Client workshop 3-5pm tomorrow.",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "workshop",
+            "client"
+          ],
+          "startISO": "2025-10-09T15:00:00+08:00",
+          "endISO": "2025-10-09T17:00:00+08:00",
+          "dueISO": null,
+          "isAllDay": false,
+          "location": null
+        }
+      ]
+    },
+    {
+      "id": "cap-004",
+      "kind": "text",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Sat 12 Oct brunch 11am Holland V.",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "brunch"
+          ],
+          "startISO": "2025-10-12T11:00:00+08:00",
+          "endISO": null,
+          "dueISO": null,
+          "isAllDay": false,
+          "location": "Holland V"
+        }
+      ]
+    },
+    {
+      "id": "cap-005",
+      "kind": "text",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Remind me to pay utilities next Mon 9am.",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "reminder",
+          "titleKeywords": [
+            "utilities",
+            "pay"
+          ],
+          "startISO": null,
+          "endISO": null,
+          "dueISO": "2025-10-11T09:00:00+08:00",
+          "isAllDay": false,
+          "location": null
+        }
+      ]
+    },
+    {
+      "id": "cap-006",
+      "kind": "text",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Dentist 15/10/2025 14:00 Raffles Medical.",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "dentist"
+          ],
+          "startISO": "2025-10-15T14:00:00+08:00",
+          "endISO": null,
+          "dueISO": null,
+          "isAllDay": false,
+          "location": "Raffles Medical"
+        }
+      ]
+    },
+    {
+      "id": "cap-007",
+      "kind": "text",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Flight SQ305 departs 18 Oct 8:05pm Changi T3.",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "flight",
+            "sq305"
+          ],
+          "startISO": "2025-10-18T20:05:00+08:00",
+          "endISO": null,
+          "dueISO": null,
+          "isAllDay": false,
+          "location": "Changi T3"
+        }
+      ]
+    },
+    {
+      "id": "cap-008",
+      "kind": "text",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "School holiday 20 Oct all day — no meetings.",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "school",
+            "holiday"
+          ],
+          "startISO": "2025-10-20T00:00:00+08:00",
+          "endISO": null,
+          "dueISO": null,
+          "isAllDay": true,
+          "location": null
+        }
+      ]
+    },
+    {
+      "id": "cap-009",
+      "kind": "text",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "[WhatsApp] Mum: 吃饭 Sunday 6:30pm 金沙",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "吃饭",
+            "dinner"
+          ],
+          "startISO": "2025-10-12T18:30:00+08:00",
+          "endISO": null,
+          "dueISO": null,
+          "isAllDay": false,
+          "location": "金沙"
+        }
+      ]
+    },
+    {
+      "id": "cap-010",
+      "kind": "text",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "[Telegram] Hackathon briefing Fri 4-6pm Block 71.",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "hackathon",
+            "briefing"
+          ],
+          "startISO": "2025-10-12T16:00:00+08:00",
+          "endISO": "2025-10-12T18:00:00+08:00",
+          "dueISO": null,
+          "isAllDay": false,
+          "location": "Block 71"
+        }
+      ]
+    },
+    {
+      "id": "cap-011",
+      "kind": "text",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Email subject: Confirmed — Product review 9 Oct 3pm Zoom.",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "product",
+            "review"
+          ],
+          "startISO": "2025-10-09T15:00:00+08:00",
+          "endISO": null,
+          "dueISO": null,
+          "isAllDay": false,
+          "location": null
+        }
+      ]
+    },
+    {
+      "id": "cap-012",
+      "kind": "text",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "National Day parade watch party 9 Aug 7pm (cancelled last year).",
+      "negative": true,
+      "expectedActions": []
+    },
+    {
+      "id": "cap-013",
+      "kind": "text",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Meeting was yesterday 3pm — moved to next week.",
+      "negative": true,
+      "expectedActions": []
+    },
+    {
+      "id": "cap-014",
+      "kind": "text",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Two sessions: UX critique Tue 2pm and eng sync Tue 4:30pm.",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "ux",
+            "critique"
+          ],
+          "startISO": "2025-10-09T14:00:00+08:00",
+          "endISO": null,
+          "dueISO": null,
+          "isAllDay": false,
+          "location": null
+        },
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "eng",
+            "sync"
+          ],
+          "startISO": "2025-10-09T16:30:00+08:00",
+          "endISO": null,
+          "dueISO": null,
+          "isAllDay": false,
+          "location": null
+        }
+      ]
+    },
+    {
+      "id": "cap-015",
+      "kind": "text",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Pasir Ris park run Sat 7am.",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "park",
+            "run"
+          ],
+          "startISO": "2025-10-11T07:00:00+08:00",
+          "endISO": null,
+          "dueISO": null,
+          "isAllDay": false,
+          "location": "Pasir Ris"
+        }
+      ]
+    },
+    {
+      "id": "cap-016",
+      "kind": "text",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Jemakan makan tengah hari Jumaat 12:30 tengah hari.",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "makan"
+          ],
+          "startISO": "2025-10-12T12:30:00+08:00",
+          "endISO": null,
+          "dueISO": null,
+          "isAllDay": false,
+          "location": null
+        }
+      ]
+    },
+    {
+      "id": "cap-017",
+      "kind": "text",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Notes on Swift actors — no schedule here.",
+      "negative": true,
+      "expectedActions": []
+    },
+    {
+      "id": "cap-018",
+      "kind": "text",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Remember to buy milk tonight.",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "reminder",
+          "titleKeywords": [
+            "milk"
+          ],
+          "startISO": null,
+          "endISO": null,
+          "dueISO": "2025-10-08T20:00:00+08:00",
+          "isAllDay": false,
+          "location": null
+        }
+      ]
+    },
+    {
+      "id": "cap-019",
+      "kind": "text",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "1-to-1 with Alex next Wed 11:15am.",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "alex",
+            "1-to-1"
+          ],
+          "startISO": "2025-10-10T11:15:00+08:00",
+          "endISO": null,
+          "dueISO": null,
+          "isAllDay": false,
+          "location": null
+        }
+      ]
+    },
+    {
+      "id": "cap-020",
+      "kind": "text",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Piano lesson 13/10 5pm Buona Vista.",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "piano"
+          ],
+          "startISO": "2025-10-13T17:00:00+08:00",
+          "endISO": null,
+          "dueISO": null,
+          "isAllDay": false,
+          "location": "Buona Vista"
+        }
+      ]
+    },
+    {
+      "id": "cap-021",
+      "kind": "text",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Community centre blood drive 25 Oct 9am-12pm.",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "blood",
+            "drive"
+          ],
+          "startISO": "2025-10-25T09:00:00+08:00",
+          "endISO": "2025-10-25T12:00:00+08:00",
+          "dueISO": null,
+          "isAllDay": false,
+          "location": null
+        }
+      ]
+    },
+    {
+      "id": "cap-022",
+      "kind": "text",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Random bookmark about typography.",
+      "negative": true,
+      "expectedActions": []
+    },
+    {
+      "id": "cap-023",
+      "kind": "text",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "NTUC receipt total $42.80.",
+      "negative": true,
+      "expectedActions": []
+    },
+    {
+      "id": "cap-024",
+      "kind": "text",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Hawker promo flyer: Free coffee 11 Oct 8-10am Tiong Bahru.",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "coffee",
+            "promo"
+          ],
+          "startISO": "2025-10-11T08:00:00+08:00",
+          "endISO": "2025-10-11T10:00:00+08:00",
+          "dueISO": null,
+          "isAllDay": false,
+          "location": "Tiong Bahru"
+        }
+      ]
+    },
+    {
+      "id": "cap-025",
+      "kind": "text",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Gym 6am daily habit (not a calendar invite).",
+      "negative": true,
+      "expectedActions": []
+    },
+    {
+      "id": "cap-026",
+      "kind": "text",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Send deck to investor before Thu 5pm.",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "reminder",
+          "titleKeywords": [
+            "deck",
+            "investor"
+          ],
+          "startISO": null,
+          "endISO": null,
+          "dueISO": "2025-10-10T17:00:00+08:00",
+          "isAllDay": false,
+          "location": null
+        }
+      ]
+    },
+    {
+      "id": "cap-027",
+      "kind": "text",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Lunch 明天 12pm 莱佛士坊.",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "lunch"
+          ],
+          "startISO": "2025-10-09T12:00:00+08:00",
+          "endISO": null,
+          "dueISO": null,
+          "isAllDay": false,
+          "location": "莱佛士坊"
+        }
+      ]
+    },
+    {
+      "id": "cap-028",
+      "kind": "text",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Board meeting 30/09/2025 9am MBFC Tower 3.",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "board",
+            "meeting"
+          ],
+          "startISO": "2025-09-30T09:00:00+08:00",
+          "endISO": null,
+          "dueISO": null,
+          "isAllDay": false,
+          "location": "MBFC Tower 3"
+        }
+      ]
+    },
+    {
+      "id": "cap-029",
+      "kind": "text",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Quote: 'Time is a flat circle.'",
+      "negative": true,
+      "expectedActions": []
+    },
+    {
+      "id": "cap-030",
+      "kind": "text",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Pickup passport ICA 17 Oct 2:15pm.",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "passport",
+            "ica"
+          ],
+          "startISO": "2025-10-17T14:15:00+08:00",
+          "endISO": null,
+          "dueISO": null,
+          "isAllDay": false,
+          "location": null
+        }
+      ]
+    },
+    {
+      "id": "cap-031",
+      "kind": "text",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Webinar replay link only — no date.",
+      "negative": true,
+      "expectedActions": []
+    },
+    {
+      "id": "cap-032",
+      "kind": "text",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "House viewing Sun 19 Oct 4-5:30pm Serangoon.",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "house",
+            "viewing"
+          ],
+          "startISO": "2025-10-19T16:00:00+08:00",
+          "endISO": "2025-10-19T17:30:00+08:00",
+          "dueISO": null,
+          "isAllDay": false,
+          "location": "Serangoon"
+        }
+      ]
+    },
+    {
+      "id": "cap-033",
+      "kind": "text",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Paylah transfer to Jason $15.",
+      "negative": true,
+      "expectedActions": []
+    },
+    {
+      "id": "cap-034",
+      "kind": "text",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Volunteer shift 22/10 18:00-21:00 Food Bank.",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "volunteer",
+            "food bank"
+          ],
+          "startISO": "2025-10-22T18:00:00+08:00",
+          "endISO": "2025-10-22T21:00:00+08:00",
+          "dueISO": null,
+          "isAllDay": false,
+          "location": null
+        }
+      ]
+    },
+    {
+      "id": "cap-035",
+      "kind": "text",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Kids science camp 14 Oct all day.",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "science",
+            "camp"
+          ],
+          "startISO": "2025-10-14T00:00:00+08:00",
+          "endISO": null,
+          "dueISO": null,
+          "isAllDay": true,
+          "location": null
+        }
+      ]
+    },
+    {
+      "id": "cap-036",
+      "kind": "text",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Architecture notes from lecture.",
+      "negative": true,
+      "expectedActions": []
+    },
+    {
+      "id": "cap-037",
+      "kind": "text",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Call plumber Tue 8am.",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "plumber",
+            "call"
+          ],
+          "startISO": "2025-10-09T08:00:00+08:00",
+          "endISO": null,
+          "dueISO": null,
+          "isAllDay": false,
+          "location": null
+        }
+      ]
+    },
+    {
+      "id": "cap-038",
+      "kind": "text",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Reminder: submit claims by 31/10 23:59.",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "reminder",
+          "titleKeywords": [
+            "claims",
+            "submit"
+          ],
+          "startISO": null,
+          "endISO": null,
+          "dueISO": "2025-10-31T23:59:00+08:00",
+          "isAllDay": false,
+          "location": null
+        }
+      ]
+    },
+    {
+      "id": "cap-039",
+      "kind": "text",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Meeting invite declined — conflict.",
+      "negative": true,
+      "expectedActions": []
+    },
+    {
+      "id": "cap-040",
+      "kind": "text",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Misc note 39 about caching.",
+      "negative": true,
+      "expectedActions": []
+    },
+    {
+      "id": "cap-041",
+      "kind": "screenshot",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Screenshot: MRT map legend only.",
+      "negative": true,
+      "expectedActions": [],
+      "imagePath": "Evals/fixtures/screenshots/cap-041.png"
+    },
+    {
+      "id": "cap-042",
+      "kind": "screenshot",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Flyer: Zumba class 16 Oct 7pm Bishan CC.",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "zumba"
+          ],
+          "startISO": "2025-10-16T19:00:00+08:00",
+          "endISO": null,
+          "dueISO": null,
+          "isAllDay": false,
+          "location": "Bishan CC"
+        }
+      ],
+      "imagePath": "Evals/fixtures/screenshots/cap-042.png"
+    },
+    {
+      "id": "cap-043",
+      "kind": "screenshot",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Chat screenshot — meet 10 Oct 1pm Starbucks Raffles.",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "meet",
+            "starbucks"
+          ],
+          "startISO": "2025-10-10T13:00:00+08:00",
+          "endISO": null,
+          "dueISO": null,
+          "isAllDay": false,
+          "location": null
+        }
+      ],
+      "imagePath": "Evals/fixtures/screenshots/cap-043.png"
+    },
+    {
+      "id": "cap-044",
+      "kind": "screenshot",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Parking coupon 3 hours.",
+      "negative": true,
+      "expectedActions": [],
+      "imagePath": "Evals/fixtures/screenshots/cap-044.png"
+    },
+    {
+      "id": "cap-045",
+      "kind": "screenshot",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Clinic appt 21/10 10:30am — QR check-in.",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "clinic"
+          ],
+          "startISO": "2025-10-21T10:30:00+08:00",
+          "endISO": null,
+          "dueISO": null,
+          "isAllDay": false,
+          "location": null
+        }
+      ],
+      "imagePath": "Evals/fixtures/screenshots/cap-045.png"
+    },
+    {
+      "id": "cap-046",
+      "kind": "screenshot",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Poster: Hari Raya bazaar 8-12 Mar 2026.",
+      "negative": true,
+      "expectedActions": [],
+      "imagePath": "Evals/fixtures/screenshots/cap-046.png"
+    },
+    {
+      "id": "cap-047",
+      "kind": "screenshot",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Whiteboard photo: sprint goals Q4.",
+      "negative": true,
+      "expectedActions": [],
+      "imagePath": "Evals/fixtures/screenshots/cap-047.png"
+    },
+    {
+      "id": "cap-048",
+      "kind": "screenshot",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Screenshot: MRT map legend only.",
+      "negative": true,
+      "expectedActions": [],
+      "imagePath": "Evals/fixtures/screenshots/cap-048.png"
+    },
+    {
+      "id": "cap-049",
+      "kind": "screenshot",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Flyer: Zumba class 16 Oct 7pm Bishan CC.",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "zumba"
+          ],
+          "startISO": "2025-10-16T19:00:00+08:00",
+          "endISO": null,
+          "dueISO": null,
+          "isAllDay": false,
+          "location": "Bishan CC"
+        }
+      ],
+      "imagePath": "Evals/fixtures/screenshots/cap-049.png"
+    },
+    {
+      "id": "cap-050",
+      "kind": "screenshot",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Chat screenshot — meet 10 Oct 1pm Starbucks Raffles.",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "meet",
+            "starbucks"
+          ],
+          "startISO": "2025-10-10T13:00:00+08:00",
+          "endISO": null,
+          "dueISO": null,
+          "isAllDay": false,
+          "location": null
+        }
+      ],
+      "imagePath": "Evals/fixtures/screenshots/cap-050.png"
+    },
+    {
+      "id": "cap-051",
+      "kind": "screenshot",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Parking coupon 3 hours.",
+      "negative": true,
+      "expectedActions": [],
+      "imagePath": "Evals/fixtures/screenshots/cap-051.png"
+    },
+    {
+      "id": "cap-052",
+      "kind": "screenshot",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Clinic appt 21/10 10:30am — QR check-in.",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "clinic"
+          ],
+          "startISO": "2025-10-21T10:30:00+08:00",
+          "endISO": null,
+          "dueISO": null,
+          "isAllDay": false,
+          "location": null
+        }
+      ],
+      "imagePath": "Evals/fixtures/screenshots/cap-052.png"
+    },
+    {
+      "id": "cap-053",
+      "kind": "screenshot",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Poster: Hari Raya bazaar 8-12 Mar 2026.",
+      "negative": true,
+      "expectedActions": [],
+      "imagePath": "Evals/fixtures/screenshots/cap-053.png"
+    },
+    {
+      "id": "cap-054",
+      "kind": "screenshot",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Whiteboard photo: sprint goals Q4.",
+      "negative": true,
+      "expectedActions": [],
+      "imagePath": "Evals/fixtures/screenshots/cap-054.png"
+    },
+    {
+      "id": "cap-055",
+      "kind": "screenshot",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Screenshot: MRT map legend only.",
+      "negative": true,
+      "expectedActions": [],
+      "imagePath": "Evals/fixtures/screenshots/cap-055.png"
+    },
+    {
+      "id": "cap-056",
+      "kind": "screenshot",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Flyer: Zumba class 16 Oct 7pm Bishan CC.",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "zumba"
+          ],
+          "startISO": "2025-10-16T19:00:00+08:00",
+          "endISO": null,
+          "dueISO": null,
+          "isAllDay": false,
+          "location": "Bishan CC"
+        }
+      ],
+      "imagePath": "Evals/fixtures/screenshots/cap-056.png"
+    },
+    {
+      "id": "cap-057",
+      "kind": "screenshot",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Chat screenshot — meet 10 Oct 1pm Starbucks Raffles.",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "meet",
+            "starbucks"
+          ],
+          "startISO": "2025-10-10T13:00:00+08:00",
+          "endISO": null,
+          "dueISO": null,
+          "isAllDay": false,
+          "location": null
+        }
+      ],
+      "imagePath": "Evals/fixtures/screenshots/cap-057.png"
+    },
+    {
+      "id": "cap-058",
+      "kind": "screenshot",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Parking coupon 3 hours.",
+      "negative": true,
+      "expectedActions": [],
+      "imagePath": "Evals/fixtures/screenshots/cap-058.png"
+    },
+    {
+      "id": "cap-059",
+      "kind": "screenshot",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Clinic appt 21/10 10:30am — QR check-in.",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "clinic"
+          ],
+          "startISO": "2025-10-21T10:30:00+08:00",
+          "endISO": null,
+          "dueISO": null,
+          "isAllDay": false,
+          "location": null
+        }
+      ],
+      "imagePath": "Evals/fixtures/screenshots/cap-059.png"
+    },
+    {
+      "id": "cap-060",
+      "kind": "screenshot",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Poster: Hari Raya bazaar 8-12 Mar 2026.",
+      "negative": true,
+      "expectedActions": [],
+      "imagePath": "Evals/fixtures/screenshots/cap-060.png"
+    },
+    {
+      "id": "cap-061",
+      "kind": "screenshot",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Whiteboard photo: sprint goals Q4.",
+      "negative": true,
+      "expectedActions": [],
+      "imagePath": "Evals/fixtures/screenshots/cap-061.png"
+    },
+    {
+      "id": "cap-062",
+      "kind": "screenshot",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Screenshot: MRT map legend only.",
+      "negative": true,
+      "expectedActions": [],
+      "imagePath": "Evals/fixtures/screenshots/cap-062.png"
+    },
+    {
+      "id": "cap-063",
+      "kind": "screenshot",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Flyer: Zumba class 16 Oct 7pm Bishan CC.",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "zumba"
+          ],
+          "startISO": "2025-10-16T19:00:00+08:00",
+          "endISO": null,
+          "dueISO": null,
+          "isAllDay": false,
+          "location": "Bishan CC"
+        }
+      ],
+      "imagePath": "Evals/fixtures/screenshots/cap-063.png"
+    },
+    {
+      "id": "cap-064",
+      "kind": "screenshot",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Chat screenshot — meet 10 Oct 1pm Starbucks Raffles.",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "meet",
+            "starbucks"
+          ],
+          "startISO": "2025-10-10T13:00:00+08:00",
+          "endISO": null,
+          "dueISO": null,
+          "isAllDay": false,
+          "location": null
+        }
+      ],
+      "imagePath": "Evals/fixtures/screenshots/cap-064.png"
+    },
+    {
+      "id": "cap-065",
+      "kind": "screenshot",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Parking coupon 3 hours.",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "reminder",
+          "titleKeywords": [
+            "review"
+          ],
+          "startISO": null,
+          "endISO": null,
+          "dueISO": "2025-10-08T18:00:00+08:00",
+          "isAllDay": false,
+          "location": null
+        }
+      ],
+      "imagePath": "Evals/fixtures/screenshots/cap-065.png"
+    },
+    {
+      "id": "cap-066",
+      "kind": "screenshot",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Clinic appt 21/10 10:30am — QR check-in.",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "clinic"
+          ],
+          "startISO": "2025-10-21T10:30:00+08:00",
+          "endISO": null,
+          "dueISO": null,
+          "isAllDay": false,
+          "location": null
+        }
+      ],
+      "imagePath": "Evals/fixtures/screenshots/cap-066.png"
+    },
+    {
+      "id": "cap-067",
+      "kind": "screenshot",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Poster: Hari Raya bazaar 8-12 Mar 2026.",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "reminder",
+          "titleKeywords": [
+            "review"
+          ],
+          "startISO": null,
+          "endISO": null,
+          "dueISO": "2025-10-08T18:00:00+08:00",
+          "isAllDay": false,
+          "location": null
+        }
+      ],
+      "imagePath": "Evals/fixtures/screenshots/cap-067.png"
+    },
+    {
+      "id": "cap-068",
+      "kind": "screenshot",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Whiteboard photo: sprint goals Q4.",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "reminder",
+          "titleKeywords": [
+            "review"
+          ],
+          "startISO": null,
+          "endISO": null,
+          "dueISO": "2025-10-08T18:00:00+08:00",
+          "isAllDay": false,
+          "location": null
+        }
+      ],
+      "imagePath": "Evals/fixtures/screenshots/cap-068.png"
+    },
+    {
+      "id": "cap-069",
+      "kind": "screenshot",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Screenshot: MRT map legend only.",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "reminder",
+          "titleKeywords": [
+            "review"
+          ],
+          "startISO": null,
+          "endISO": null,
+          "dueISO": "2025-10-08T18:00:00+08:00",
+          "isAllDay": false,
+          "location": null
+        }
+      ],
+      "imagePath": "Evals/fixtures/screenshots/cap-069.png"
+    },
+    {
+      "id": "cap-070",
+      "kind": "screenshot",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Flyer: Zumba class 16 Oct 7pm Bishan CC.",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "zumba"
+          ],
+          "startISO": "2025-10-16T19:00:00+08:00",
+          "endISO": null,
+          "dueISO": null,
+          "isAllDay": false,
+          "location": "Bishan CC"
+        }
+      ],
+      "imagePath": "Evals/fixtures/screenshots/cap-070.png"
+    },
+    {
+      "id": "cap-071",
+      "kind": "url",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Swift Concurrency deep dive",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "reminder",
+          "titleKeywords": [
+            "review"
+          ],
+          "startISO": null,
+          "endISO": null,
+          "dueISO": "2025-10-08T18:00:00+08:00",
+          "isAllDay": false,
+          "location": null
+        }
+      ],
+      "sourceURL": "https://example.com/swift-concurrency",
+      "mockPageText": "Actors isolate mutable state..."
+    },
+    {
+      "id": "cap-072",
+      "kind": "url",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "HDB viewing checklist",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "open",
+            "house"
+          ],
+          "startISO": "2025-10-26T11:00:00+08:00",
+          "endISO": null,
+          "dueISO": null,
+          "isAllDay": false,
+          "location": null
+        }
+      ],
+      "sourceURL": "https://news.example.com/hdb-viewing",
+      "mockPageText": "Open house 26 Oct 11am Punggol."
+    },
+    {
+      "id": "cap-073",
+      "kind": "url",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Daily standup",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "standup"
+          ],
+          "startISO": "2025-10-09T09:30:00+08:00",
+          "endISO": null,
+          "dueISO": null,
+          "isAllDay": false,
+          "location": null
+        }
+      ],
+      "sourceURL": "https://meet.example.com/standup",
+      "mockPageText": "Join 9 Oct 9:30am GMT+8."
+    },
+    {
+      "id": "cap-074",
+      "kind": "url",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Laksa recipe",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "jazz"
+          ],
+          "startISO": "2025-10-11T20:00:00+08:00",
+          "endISO": null,
+          "dueISO": null,
+          "isAllDay": false,
+          "location": null
+        }
+      ],
+      "sourceURL": "https://recipe.example.com/laksa",
+      "mockPageText": "Ingredients: coconut milk."
+    },
+    {
+      "id": "cap-075",
+      "kind": "url",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Jazz night tickets",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "pitch"
+          ],
+          "startISO": "2025-10-18T18:00:00+08:00",
+          "endISO": null,
+          "dueISO": null,
+          "isAllDay": false,
+          "location": null
+        }
+      ],
+      "sourceURL": "https://tickets.example.com/jazz",
+      "mockPageText": "Show 11 Oct 8pm Esplanade."
+    },
+    {
+      "id": "cap-076",
+      "kind": "url",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "API auth guide",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "reminder",
+          "titleKeywords": [
+            "review"
+          ],
+          "startISO": null,
+          "endISO": null,
+          "dueISO": "2025-10-08T18:00:00+08:00",
+          "isAllDay": false,
+          "location": null
+        }
+      ],
+      "sourceURL": "https://docs.example.com/api",
+      "mockPageText": "No events."
+    },
+    {
+      "id": "cap-077",
+      "kind": "url",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "iOS 26 notes",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "open",
+            "house"
+          ],
+          "startISO": "2025-10-26T11:00:00+08:00",
+          "endISO": null,
+          "dueISO": null,
+          "isAllDay": false,
+          "location": null
+        }
+      ],
+      "sourceURL": "https://blog.example.com/ios26",
+      "mockPageText": "Foundation Models on device."
+    },
+    {
+      "id": "cap-078",
+      "kind": "url",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Startup pitch night",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "standup"
+          ],
+          "startISO": "2025-10-09T09:30:00+08:00",
+          "endISO": null,
+          "dueISO": null,
+          "isAllDay": false,
+          "location": null
+        }
+      ],
+      "sourceURL": "https://events.example.com/startup",
+      "mockPageText": "18 Oct 6pm Sandcrawler."
+    },
+    {
+      "id": "cap-079",
+      "kind": "url",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "PTA meeting",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "jazz"
+          ],
+          "startISO": "2025-10-11T20:00:00+08:00",
+          "endISO": null,
+          "dueISO": null,
+          "isAllDay": false,
+          "location": null
+        }
+      ],
+      "sourceURL": "https://school.example.com/pta",
+      "mockPageText": "PTA 15 Oct 7pm hall."
+    },
+    {
+      "id": "cap-080",
+      "kind": "url",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "ICA appointment",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "pitch"
+          ],
+          "startISO": "2025-10-18T18:00:00+08:00",
+          "endISO": null,
+          "dueISO": null,
+          "isAllDay": false,
+          "location": null
+        }
+      ],
+      "sourceURL": "https://gov.example.com/ica",
+      "mockPageText": "Slot 19 Oct 11:00."
+    },
+    {
+      "id": "cap-081",
+      "kind": "url",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Swift Concurrency deep dive",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "reminder",
+          "titleKeywords": [
+            "review"
+          ],
+          "startISO": null,
+          "endISO": null,
+          "dueISO": "2025-10-08T18:00:00+08:00",
+          "isAllDay": false,
+          "location": null
+        }
+      ],
+      "sourceURL": "https://example.com/swift-concurrency",
+      "mockPageText": "Actors isolate mutable state..."
+    },
+    {
+      "id": "cap-082",
+      "kind": "url",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "HDB viewing checklist",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "open",
+            "house"
+          ],
+          "startISO": "2025-10-26T11:00:00+08:00",
+          "endISO": null,
+          "dueISO": null,
+          "isAllDay": false,
+          "location": null
+        }
+      ],
+      "sourceURL": "https://news.example.com/hdb-viewing",
+      "mockPageText": "Open house 26 Oct 11am Punggol."
+    },
+    {
+      "id": "cap-083",
+      "kind": "url",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Daily standup",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "standup"
+          ],
+          "startISO": "2025-10-09T09:30:00+08:00",
+          "endISO": null,
+          "dueISO": null,
+          "isAllDay": false,
+          "location": null
+        }
+      ],
+      "sourceURL": "https://meet.example.com/standup",
+      "mockPageText": "Join 9 Oct 9:30am GMT+8."
+    },
+    {
+      "id": "cap-084",
+      "kind": "url",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Laksa recipe",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "jazz"
+          ],
+          "startISO": "2025-10-11T20:00:00+08:00",
+          "endISO": null,
+          "dueISO": null,
+          "isAllDay": false,
+          "location": null
+        }
+      ],
+      "sourceURL": "https://recipe.example.com/laksa",
+      "mockPageText": "Ingredients: coconut milk."
+    },
+    {
+      "id": "cap-085",
+      "kind": "url",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Jazz night tickets",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "pitch"
+          ],
+          "startISO": "2025-10-18T18:00:00+08:00",
+          "endISO": null,
+          "dueISO": null,
+          "isAllDay": false,
+          "location": null
+        }
+      ],
+      "sourceURL": "https://tickets.example.com/jazz",
+      "mockPageText": "Show 11 Oct 8pm Esplanade."
+    },
+    {
+      "id": "cap-086",
+      "kind": "url",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "API auth guide",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "reminder",
+          "titleKeywords": [
+            "review"
+          ],
+          "startISO": null,
+          "endISO": null,
+          "dueISO": "2025-10-08T18:00:00+08:00",
+          "isAllDay": false,
+          "location": null
+        }
+      ],
+      "sourceURL": "https://docs.example.com/api",
+      "mockPageText": "No events."
+    },
+    {
+      "id": "cap-087",
+      "kind": "url",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "iOS 26 notes",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "open",
+            "house"
+          ],
+          "startISO": "2025-10-26T11:00:00+08:00",
+          "endISO": null,
+          "dueISO": null,
+          "isAllDay": false,
+          "location": null
+        }
+      ],
+      "sourceURL": "https://blog.example.com/ios26",
+      "mockPageText": "Foundation Models on device."
+    },
+    {
+      "id": "cap-088",
+      "kind": "url",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Startup pitch night",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "standup"
+          ],
+          "startISO": "2025-10-09T09:30:00+08:00",
+          "endISO": null,
+          "dueISO": null,
+          "isAllDay": false,
+          "location": null
+        }
+      ],
+      "sourceURL": "https://events.example.com/startup",
+      "mockPageText": "18 Oct 6pm Sandcrawler."
+    },
+    {
+      "id": "cap-089",
+      "kind": "url",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "PTA meeting",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "jazz"
+          ],
+          "startISO": "2025-10-11T20:00:00+08:00",
+          "endISO": null,
+          "dueISO": null,
+          "isAllDay": false,
+          "location": null
+        }
+      ],
+      "sourceURL": "https://school.example.com/pta",
+      "mockPageText": "PTA 15 Oct 7pm hall."
+    },
+    {
+      "id": "cap-090",
+      "kind": "url",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "ICA appointment",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "pitch"
+          ],
+          "startISO": "2025-10-18T18:00:00+08:00",
+          "endISO": null,
+          "dueISO": null,
+          "isAllDay": false,
+          "location": null
+        }
+      ],
+      "sourceURL": "https://gov.example.com/ica",
+      "mockPageText": "Slot 19 Oct 11:00."
+    },
+    {
+      "id": "cap-091",
+      "kind": "url",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Swift Concurrency deep dive",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "reminder",
+          "titleKeywords": [
+            "review"
+          ],
+          "startISO": null,
+          "endISO": null,
+          "dueISO": "2025-10-08T18:00:00+08:00",
+          "isAllDay": false,
+          "location": null
+        }
+      ],
+      "sourceURL": "https://example.com/swift-concurrency",
+      "mockPageText": "Actors isolate mutable state..."
+    },
+    {
+      "id": "cap-092",
+      "kind": "url",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "HDB viewing checklist",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "open",
+            "house"
+          ],
+          "startISO": "2025-10-26T11:00:00+08:00",
+          "endISO": null,
+          "dueISO": null,
+          "isAllDay": false,
+          "location": null
+        }
+      ],
+      "sourceURL": "https://news.example.com/hdb-viewing",
+      "mockPageText": "Open house 26 Oct 11am Punggol."
+    },
+    {
+      "id": "cap-093",
+      "kind": "url",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Daily standup",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "standup"
+          ],
+          "startISO": "2025-10-09T09:30:00+08:00",
+          "endISO": null,
+          "dueISO": null,
+          "isAllDay": false,
+          "location": null
+        }
+      ],
+      "sourceURL": "https://meet.example.com/standup",
+      "mockPageText": "Join 9 Oct 9:30am GMT+8."
+    },
+    {
+      "id": "cap-094",
+      "kind": "url",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Laksa recipe",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "jazz"
+          ],
+          "startISO": "2025-10-11T20:00:00+08:00",
+          "endISO": null,
+          "dueISO": null,
+          "isAllDay": false,
+          "location": null
+        }
+      ],
+      "sourceURL": "https://recipe.example.com/laksa",
+      "mockPageText": "Ingredients: coconut milk."
+    },
+    {
+      "id": "cap-095",
+      "kind": "url",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Jazz night tickets",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "pitch"
+          ],
+          "startISO": "2025-10-18T18:00:00+08:00",
+          "endISO": null,
+          "dueISO": null,
+          "isAllDay": false,
+          "location": null
+        }
+      ],
+      "sourceURL": "https://tickets.example.com/jazz",
+      "mockPageText": "Show 11 Oct 8pm Esplanade."
+    },
+    {
+      "id": "cap-096",
+      "kind": "url",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "API auth guide",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "reminder",
+          "titleKeywords": [
+            "review"
+          ],
+          "startISO": null,
+          "endISO": null,
+          "dueISO": "2025-10-08T18:00:00+08:00",
+          "isAllDay": false,
+          "location": null
+        }
+      ],
+      "sourceURL": "https://docs.example.com/api",
+      "mockPageText": "No events."
+    },
+    {
+      "id": "cap-097",
+      "kind": "url",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "iOS 26 notes",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "open",
+            "house"
+          ],
+          "startISO": "2025-10-26T11:00:00+08:00",
+          "endISO": null,
+          "dueISO": null,
+          "isAllDay": false,
+          "location": null
+        }
+      ],
+      "sourceURL": "https://blog.example.com/ios26",
+      "mockPageText": "Foundation Models on device."
+    },
+    {
+      "id": "cap-098",
+      "kind": "url",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "Startup pitch night",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "standup"
+          ],
+          "startISO": "2025-10-09T09:30:00+08:00",
+          "endISO": null,
+          "dueISO": null,
+          "isAllDay": false,
+          "location": null
+        }
+      ],
+      "sourceURL": "https://events.example.com/startup",
+      "mockPageText": "18 Oct 6pm Sandcrawler."
+    },
+    {
+      "id": "cap-099",
+      "kind": "url",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "PTA meeting",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "jazz"
+          ],
+          "startISO": "2025-10-11T20:00:00+08:00",
+          "endISO": null,
+          "dueISO": null,
+          "isAllDay": false,
+          "location": null
+        }
+      ],
+      "sourceURL": "https://school.example.com/pta",
+      "mockPageText": "PTA 15 Oct 7pm hall."
+    },
+    {
+      "id": "cap-100",
+      "kind": "url",
+      "referenceDateISO": "2025-10-08T09:00:00+08:00",
+      "text": "ICA appointment",
+      "negative": false,
+      "expectedActions": [
+        {
+          "kind": "event",
+          "titleKeywords": [
+            "pitch"
+          ],
+          "startISO": "2025-10-18T18:00:00+08:00",
+          "endISO": null,
+          "dueISO": null,
+          "isAllDay": false,
+          "location": null
+        }
+      ],
+      "sourceURL": "https://gov.example.com/ica",
+      "mockPageText": "Slot 19 Oct 11:00."
+    }
+  ]
+}
